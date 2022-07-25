@@ -1,0 +1,15 @@
+.mainLinksGrid{
+    display: flex;
+    justify-content: space-around;
+}
+.linkStyle{
+    color: #575757;
+    text-decoration: none;
+}
+
+
+.mainLinkLi{
+   background: url(https://www.golfdiscount.com/media/images/bullet.png)  0 no-repeat !important;
+   padding-left: 22px !important;
+   list-style: none;
+}
