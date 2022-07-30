@@ -1,0 +1,1 @@
+export const MAINLINK = 'https://www.golfdiscount.com'

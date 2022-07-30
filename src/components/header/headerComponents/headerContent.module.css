@@ -1,0 +1,121 @@
+.contentHeaderStyle{
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    width: auto;
+}
+
+.logo{
+    max-width: 70%;
+}
+.logo img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    width: 170px;
+    height: 46px;
+}
+
+ul .trackOrder{
+    margin-bottom: 0.5rem;
+}
+
+.trackOrder{
+    
+    float: right;
+    padding-left: 15px;
+}
+
+.trackOrder a{
+    background-color: darkred;
+    color: white;
+    height: 31px;
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    padding: 0px;
+    vertical-align: middle;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.searchBar{
+    width: 790px;
+}
+ .searchBar{
+    float: right;
+    padding-left: 15px;
+    position: relative;
+ }
+.searchContent{
+    padding: 0px;
+    overflow: unset;
+    display: unset;
+}
+
+.searchActions{
+display: block;
+}
+
+.searchBtn{
+display: inline-block;
+
+}
+/* picture */
+.searchBtn::before{
+    line-height: 32px;
+    color: #757575;
+
+}
+form{
+    display: block;
+    margin-top: 0em;
+    -webkit-tap-highlight-color: transparent;
+}
+.contentLinksPanel{
+    padding: 0;
+    margin: 0;
+    display: block;
+    margin-bottom: 1rem;
+}
+.contentLinks{
+    margin: 0;
+    padding: 0;
+    list-style: none none;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.contentLinks li{
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 5px;
+}
+.topContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.linksCont{
+    text-decoration: none;
+}
+
+.fieldSearch{
+    display: flex;
+    justify-content: right;
+}
+.controlSearch{
+    width: 768px;
+    height: 22px;
+}
+
+.miniCart{
+        display: inline-block;
+    position: relative;
+    float: right;
+}

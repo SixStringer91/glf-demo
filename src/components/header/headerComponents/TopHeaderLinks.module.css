@@ -1,0 +1,31 @@
+.headerLinkWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.helpDesk{
+    font-size: 12px;
+}
+
+
+.LinksPhoneIcon{
+    background-image: url(https://www.golfdiscount.com/media/images/sprite-icons-social.png);
+    background-position: -7px -3px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+.headerLinks{
+    width: auto;
+    padding: 0px;
+    margin-bottom: 0px;
+    max-width: 1280px;
+    font-size: 12px;
+}
+.headerLinks a{
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: none;
+    font-size: 12px;
+}

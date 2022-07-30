@@ -1,0 +1,181 @@
+.megaMenu li, .megaMenu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.megaMenu * {
+    box-sizing: border-box;
+}
+
+.roleAfterMenu {
+    display: inline;
+}
+
+.roleAfterMenu::after {
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 12px;
+    line-height: 20px;
+    content: '\e622';
+    font-family: 'luma-icons';
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+}
+
+.megaMenu {
+    padding: 0 8px;
+    display: block;
+    background-color: #069;
+    color: #fff;
+    border-bottom: 5px solid #036;
+    margin-bottom: 25px;
+    position: relative;
+    top: 0;
+}
+
+.firstLevelBlock{
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 0;
+    padding-bottom: 15px;
+    width: 14.6666%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.firstLevelBlock span {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 400;
+    font-family: bitter, georgia, serif;
+}
+
+.firstLevelBlock a {
+    text-decoration: none;
+}
+
+.firstLevelBlock span:hover {
+    color: #006bb4;
+
+}
+
+.secondLevel{
+    margin-top: 10px;
+}
+
+.linkToAll{
+    font-size: 15px;
+    font-family: Bitter, georgia, serif;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-left: -10px;
+    width: 100%;
+    color: black;
+}
+
+.linkToAll a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.secondLevel a{
+    background: url(../../../assets/pics/bullet.png) 3px 6px no-repeat;
+    padding-left: 15px;
+    transition: background-position 150ms ease-out;
+    -moz-transition: background-position 150ms ease-out;
+    -webkit-transition: background-position 150ms ease-out;
+    -o-transition: background-position 150ms ease-out;
+}
+
+.secondLevel a:hover {
+    background: url(../../../assets/pics/bullet.png) 6px 6px no-repeat;
+}
+
+.secondLevel span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #006bb4;
+    text-transform: none;
+}
+
+.secondLevel span:hover {
+    color: black;
+}
+
+
+
+
+.megaMenuSubmenu{
+    z-index: 9999;
+    visibility: hidden;
+    position: absolute;
+    padding: 2%;
+    background: white;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 15%);
+    border-top: 5px solid #036;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.firstLevelBlock a {
+    color: black;
+}
+
+.navigationMenu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.navigationMenu li{
+    padding: 0 5px 0 12px;
+}
+
+.navigationMenu li:hover .megaMenuSubmenu {
+    visibility: visible;
+}
+
+.navigationMenu li:last-child{
+    background: red;
+}
+
+.headerLink > a{
+    padding-right: 10px;
+    font-family: Open Sans;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 47px;
+    text-transform: uppercase;
+}
+
+
+.headerLink>a>span {
+    color: #fff;
+}
+
+.navigationMenu{
+    margin: 0;
+    padding: 0;
+}
+
+.opener {
+    margin-right: 5px;;
+}
+
+.navigationMenu li:not(:last-child):hover{
+    background: #036;
+}

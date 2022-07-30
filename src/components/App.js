@@ -1,16 +1,15 @@
-import React, { Fragment } from 'react';
 import './App.css';
-import Header from './header/header.module';
-import Footer from './footer/footer.module';
-import Main from './mainContent/mainContent.module';
+import Header from './header';
+import Footer from './footer';
+import Main from './main';
 
 const App = () => {
   return (
-    <Fragment>
+    <>
       <Header />
       <Main />
       <Footer />
-    </Fragment>
+    </>
   );
 }
 
