@@ -7,7 +7,7 @@ const Main = () => {
     return (
         <>
             {/* <MainLinksPanel /> */}
-            {/* <CmsBlock /> */}
+            <CmsBlock />
         </>
     )
 }

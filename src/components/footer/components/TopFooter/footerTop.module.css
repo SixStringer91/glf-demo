@@ -39,7 +39,7 @@ padding:0 18px 0 0;
 }
 
 .iconTwitter {
-    background-image: url(https://www.golfdiscount.com/media/images/sprite-icons-social.png);
+    background-image: url(../../../../assets/pics/sprite-icons-social.webp);
     background-position: -7px -157px;
     background-repeat: no-repeat;
     background-color: #bbb;
@@ -75,7 +75,7 @@ padding:0 18px 0 0;
 }
 
 .iconFacebook {
-    background-image: url(https://www.golfdiscount.com/media/images/sprite-icons-social.png);
+    background-image: url(../../../../assets/pics/sprite-icons-social.webp);
     background-position: -57px -157px;
     background-repeat: no-repeat;
     background-color: #bbb;
@@ -86,7 +86,7 @@ padding:0 18px 0 0;
 }
 
 .iconYoutube {
-    background-image: url(https://www.golfdiscount.com/media/images/sprite-icons-social.png);
+    background-image: url(../../../../assets/pics/sprite-icons-social.webp);
     background-position: -157px -157px;
     background-repeat: no-repeat;
     background-color: #bbb;
@@ -97,7 +97,7 @@ padding:0 18px 0 0;
 }
 
 .iconPinterest {
-    background-image: url(https://www.golfdiscount.com/media/images/sprite-icons-social.png);
+    background-image: url(../../../../assets/pics/sprite-icons-social.webp);
     background-position: -307px -157px;
     background-repeat: no-repeat;
     background-color: #bbb;
@@ -137,6 +137,7 @@ padding:0 18px 0 0;
 
 .feature>span.icon {
     text-align: center;
+    flex-shrink: 0;
 }
 
 
@@ -175,7 +176,7 @@ padding:0 18px 0 0;
 }
 
 .letterIcon {
-    background-image: url(https://www.golfdiscount.com/media/images/sprite-icons-social.png);
+    background-image: url(../../../../assets/pics/sprite-icons-social.webp);
     background-position: -157px -58px;
     width: 30px;
     height: 30px;
@@ -193,7 +194,7 @@ padding:0 18px 0 0;
 }
 
 .locationIcon {
-    background-image: url(https://www.golfdiscount.com/media/images/sprite-icons-social.png);
+    background-image: url(../../../../assets/pics/sprite-icons-social.webp);
     background-position: -207px -58px;
     width: 30px;
     height: 30px;
@@ -276,19 +277,22 @@ padding:0 18px 0 0;
 
 .phoneIcon {
     composes:icon;
-    background-image: url(https://www.golfdiscount.com/media/images/sprite-icons-social.png);
+    background-image: url(../../../../assets/pics/sprite-icons-social.webp);
+
     background-position: -7px -58px;
 }
 
 .letter {
     composes: icon;
-    background-image: url(https://www.golfdiscount.com/media/images/sprite-icons-social.png);
+    background-image: url(../../../../assets/pics/sprite-icons-social.webp);
+
     background-position: -157px -58px;
 }
 
 .location {
     composes: icon;
-    background-image: url(https://www.golfdiscount.com/media/images/sprite-icons-social.png);
+    background-image: url(../../../../assets/pics/sprite-icons-social.webp);
+
     background-position: -207px -58px;
 }
 
@@ -321,9 +325,6 @@ padding:0 18px 0 0;
     display: flex;
 }
 
-.infoBlock > div:first-child {
-    flex-shrink: 0;
-}
 
 .yotpo{
     padding-top: 23px;
@@ -382,6 +383,11 @@ padding:0 18px 0 0;
 }
 
 
+.infoBlock > div:first-child {
+    flex-shrink: 0;
+}
+
+
 .badgeImage{
     display: block;
 }
@@ -436,18 +442,36 @@ padding:0 18px 0 0;
 
 @media (max-width: 1130px) {
     .upperContainer {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 0.5fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
             "FooterAbout FooterWhy"
             "FooterAbout FooterContact";
     }
+
+    
+/* .infoBlock > div:first-child {
+    flex-shrink: 1;
+} */
 }
 
 @media (max-width: 768px) {
+
+    .yotpo {
+        margin: 0 auto;
+    }
+
+    .fieldSub input{
+        font-size: 12px !important;
+    }
+    
+
     .upperContainer {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 15px;
+        padding: 18px;
+        background-color: #eee;
     }
 
     .FooterAbout{

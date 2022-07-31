@@ -1,12 +1,17 @@
-/* .footerLinksGrid{
+.footerLinksGrid{
     display: flex;
     justify-content: space-between;
-    padding: 1%;
+    padding: 0 15px;
 }
-.linkStyle{
+.footLi a, .footLi a:visited{
     color: #575757;
     text-decoration: none;
 }
+
+.footLi a:hover{
+    color: #000;
+}
+
 
 .footerblockTitle{
     padding-top: 8px;
@@ -26,7 +31,7 @@
 }
 
 .footLi{
-   background: url(https://www.golfdiscount.com/media/images/bullet.png)  0 no-repeat !important;
+   background: url(../../../../assets/pics/bullet.png)  0 no-repeat !important;
    padding-left: 22px !important;
    list-style: none;
    border: none;
@@ -45,18 +50,22 @@
     font-size: 1.2rem;
 }
 
-.footLi a:hover{
-    color: #575757;
-}
 
    .footerblockContent{
         display: block;
     }
 
+    .footerLinksGrid ul{
+        margin-bottom: 0;
+        padding: 0;
+    }
+    
+ 
+
 @media (max-width: 768px) {
     .footerLinksGrid{
         flex-direction: column;
-
+        padding:0;
     }
 
     .footerLinksElement {
@@ -78,7 +87,7 @@
         background-color: #fff;
     }
 
-    .footerblockContent ul{
+    .footerLinksGrid ul{
         margin-bottom: 0;
         padding: 0 18px;
     }
@@ -96,4 +105,4 @@
     .footerblockContent_disabled {
         display: none;
     }
-} */
+}

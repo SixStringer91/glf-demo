@@ -527,7 +527,6 @@ a,
     text-decoration: none
 }
 
-a:visited,
 .alink:visited {
     color: #006bb4;
     text-decoration: none
@@ -12303,7 +12302,7 @@ div.swatch-option-tooltip {
     display: none
 }
 
-@charset "UTF-8";
+/* @charset "UTF-8"; */
 
 .slick-loading .slick-list {
 }
@@ -31063,10 +31062,10 @@ print {
         color: #0a0a0a
     }
 
-    .result-sub-content .result-title.text-ellipsis:visited {
+    /* .result-sub-content .result-title.text-ellipsis:visited {
         white-space: unset;
         color: #0a0a0a
-    }
+    } */
 
     .algolia-name-block {
         height: 50px

@@ -1,5 +1,5 @@
 .footerContent {
-    max-width: 1280px;  
+    max-width: 1280px;
     margin: 0 auto;
     background: #fff;
     padding-bottom: 25px;
@@ -13,7 +13,7 @@
     margin-top: auto;
 }
 
-.copyright{
+.copyright {
     background-color: #6e716e;
     color: #fff;
     box-sizing: border-box;
@@ -22,3 +22,17 @@
     text-align: center;
 }
 
+
+@media (max-width: 768px) {
+    .footer {
+        border-top: 1px solid #cecece;
+    }
+
+    .footerContent {
+        padding: 15px;
+    }
+
+    .footer {
+        background: #fff;
+    }
+}

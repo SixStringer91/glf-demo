@@ -1,3 +1,55 @@
+import homeOcus from '../../../assets/pics/home-ocyc-20220725.jpg'
+import apparel from '../../../assets/pics/apparel.webp';
+import homeLeftClosetsApparel from '../../../assets/pics/home-left-closeout-apparel.jpg';
+import homeLeftPackageSets from '../../../assets/pics/home-left-package-sets.jpg'
+import callAwayMavrik from '../../../assets/pics/home-flash-220518-callaway-mavrik.webp';
+import ping from '../../../assets/pics/home-flash-220701-ping-g410.webp';
+import cobra from '../../../assets/pics/home-flash-220613-cobra-mim-wedges.webp';
+import redspeed from '../../../assets/pics/home-flash-220708-cobra-radspeed.webp';
+import cleveland from '../../../assets/pics/home-flash-220322-cleveland-cbx2.jpg';
+import tmSim from '../../../assets/pics/home-flash-220713-tm-sim.webp';
+import callAwayWedges from '../../../assets/pics/home-220613-callaway-wedges-2x.webp';
+import combraSpeedZone from '../../../assets/pics/home-220519-cobra-speedzone-2x.webp'
+import cobraIrons from '../../../assets/pics/home-220606-cobra-irons.webp';
+import breakfast from '../../../assets/pics/home-220722-tm-tp5-breakfast.webp';
+import responseStripe from '../../../assets/pics/home-220722-tm-tour-response-stripe.webp';
+import skechers from '../../../assets/pics/home-220722-skechers-closeout.webp';
+import golfClubs from '../../../assets/pics/home-220104-golf-clubs.jpg';
+import golfBalls from '../../../assets/pics/home-220104-golf-balls.jpg';
+import homeApparel from '../../../assets/pics/home-220104-apparel.jpg';
+import golfShoes from '../../../assets/pics/home-220104-golf-shoes.jpg';
+import closeoutGoldClubs from '../../../assets/pics/home-closeout-golf-clubs-20211223.webp';
+import closeoutBags from '../../../assets/pics/closeouts-bags_1.webp';
+import closeoutApparel from '../../../assets/pics/closeouts-apparel.webp';
+import closeoutGolfBalls from '../../../assets/pics/home-closeout-golf-balls-20211223.webp';
+import closeoutGolfShoes from '../../../assets/pics/home-closeout-golf-shoes-20211223.webp';
+import accessoriesGloveGolf from '../../../assets/pics/accessories_golf_glove.webp';
+import clubs from '../../../assets/pics/clubs.webp';
+import bags from '../../../assets/pics/bags.webp';
+import balls2 from '../../../assets/pics/balls2.jpg';
+import shoes from '../../../assets/pics/shoes.webp';
+import rangeFinder from '../../../assets/pics/rangefinder.jpg';
+import gloves from '../../../assets/pics/gloves.webp';
+import brands from '../../../assets/pics/brands.webp';
+import adidas from '../../../assets/pics/adidas.jpg';
+import bridgestone from '../../../assets/pics/bridgestone.jpg';
+import callaway from '../../../assets/pics/callaway.jpg';
+import cleveland2 from '../../../assets/pics/cleveland.jpg';
+import cobra2022 from '../../../assets/pics/cobra-2022.webp'
+import footjoy from '../../../assets/pics/footjoy.jpg';
+import nikeSwoosh from '../../../assets/pics/nike_swoosh_black-SMALL_2.webp'
+import ping2 from '../../../assets/pics/ping.webp';
+import taylormade from '../../../assets/pics/taylormade.jpg';
+import titleist from '../../../assets/pics/titleist.jpg';
+import tourEdge from '../../../assets/pics/tour_edge-2022.webp';
+import wilson from '../../../assets/pics/wilson.webp';
+import shortsBlack from '../../../assets/pics/golf-apparel-adidas-ultimate365-shorts-black.jpg';
+import golfIronTaylormade from '../../../assets/pics/golf-iron-taylormade-sim-max-angle-itempicture.jpg';
+import strataCompleteSet from '../../../assets/pics/2019-callaway-strata-complete-set_02a.jpg';
+import baggedPracticeBalls from '../../../assets/pics/golf-balls-taylormade-tp5x-bagged-practice-balls-white-itempicture.jpg';
+import taylormadeSim from '../../../assets/pics/taylormade-sim-sand-wedge-itempicture.jpg'
+
+
 export const data = `
 <main id="maincontent" class="page-main"> <a id="contentarea" tabindex="-1"></a>
 <div class="page messages">
@@ -84,11 +136,11 @@ export const data = `
           <div>
               <a href="https://www.golfdiscount.com/closeouts/apparel"
                   title="Closeout Golf Apparel at Golf Discount"><img
-                      src="https://images.golfdiscount.com/images/home/2022/left/home-left-closeout-apparel.jpg"
+                      src="${homeLeftClosetsApparel}"
                   /></a>
                   <a href="https://www.golfdiscount.com/golf-clubs/complete-sets"
                       title="Package Sets at Golf Discount"><img
-                          src="https://images.golfdiscount.com/images/home/2022/left/home-left-package-sets.jpg"
+                          src="${homeLeftPackageSets}"
                   /></a>
           </div>
       </div>
@@ -97,27 +149,27 @@ export const data = `
             <div class="qualification__certificate-wraper">
               <div class="qualification__certificate-slider">
                 <div class="qualification__certificate-item">
-                <img src="https://images.golfdiscount.com/images/home/2022/flash/home-flash-220518-callaway-mavrik.jpg"
+                <img src="${callAwayMavrik}"
                          alt="Shop Callaway Mavrik Woods and Irons at GolfDiscount.com" />
                 </div>
                 <div class="qualification__certificate-item">
-                <img src="https://images.golfdiscount.com/images/home/2022/flash/home-flash-220701-ping-g410.jpg"
+                <img src="${ping}"
                     alt="Shop PING G410 Series at GolfDiscount.com" />
                 </div>
                 <div class="qualification__certificate-item">
-                <img src="https://images.golfdiscount.com/images/home/2022/flash/home-flash-220613-cobra-mim-wedges.jpg"
+                <img src="${cobra}"
                 alt="Cobra MIM Wedges at GolfDiscount.com" />
                 </div>
                 <div class="qualification__certificate-item">
-                <img src="https://images.golfdiscount.com/images/home/2022/flash/home-flash-220708-cobra-radspeed.jpg"
+                <img src="${redspeed}"
                     alt="Price Too Low to Show on Cobra Radspeed at GolfDiscount.com" />
                 </div>
                 <div class="qualification__certificate-item">
-                <img src="https://images.golfdiscount.com/images/home/2022/flash/home-flash-220322-cleveland-cbx2.jpg"
+                <img src="${cleveland}"
                 alt="Cleveland CBX 2 Wedges at GolfDiscount.com" />
                 </div>
                 <div class="qualification__certificate-item">
-                <img src="https://images.golfdiscount.com/images/home/2022/flash/home-flash-220713-tm-sim.jpg"
+                <img src="${tmSim}"
                     alt="Shop TaylorMade SIM Max and SIM2 Woods & Irons at GolfDiscount.com" />
                 </div>
               </div>
@@ -132,7 +184,7 @@ export const data = `
                 <div class="grid12-12 banner">
                     <a href="https://www.golfdiscount.com/our-cost-is-your-cost-specials"
                         title="OCYC (Our Cost is Your Cost) will be a product that is priced at an extreme discount, many times below original wholesale cost. OCYC (Our Cost is Your Cost) prices may not be exactly what we paid for the product at the time of purchase, but priced accordingly considering all of the costs from in-bound shipping, warehousing, advertising, labor, etc."><img
-                            src="https://images.golfdiscount.com/images/home/2022/ocyc/home-ocyc-20220725.jpg"
+                            src="${homeOcus}"
                             alt="Our Cost is Your Cost Special" /></a>
                 </div>
             </div>
@@ -142,7 +194,8 @@ export const data = `
 <div class="nested-container">
 <div class="page-banners grid-container-spaced">
 <div class="grid12-12 banner">
-<a href="https://www.golfdiscount.com/featured-products/new-for-2022" title="Shop New for 2022 Golf Clubs at GolfDiscount.com"><img src="https://images.golfdiscount.com/images/home/2022/category/home-220324-new-for-2022.jpg" alt="Shop New for 2022 Golf Clubs at GolfDiscount.com" /></a>
+<a href="https://www.golfdiscount.com/featured-products/new-for-2022" title="Shop New for 2022 Golf Clubs at GolfDiscount.com">
+    <img src="https://images.golfdiscount.com/images/home/2022/category/home-220324-new-for-2022.jpg" alt="Shop New for 2022 Golf Clubs at GolfDiscount.com" /></a>
 </div>
 </div>
 </div>
@@ -153,14 +206,14 @@ export const data = `
                 <div class="grid12-6">
                     <a href="https://www.golfdiscount.com/featured-products/brand/callaway/wedges"
                         title="Save on Featured Callaway Wedges at GolfDiscount.com"><img
-                            src="https://images.golfdiscount.com/images/home/2022/category/home-220613-callaway-wedges-2x.jpg"
+                            src="${callAwayWedges}"
                             alt="Save on Featured Callaway Wedges at GolfDiscount.com"
                             style="max-width:100%; width:627px;" /></a>
                 </div>
                 <div class="grid12-6 margin-center">
                     <a href="https://www.golfdiscount.com/brand/cobra/speedzone/woods"
                         title="Blowout Prices on Cobra Speedzone Woods at GolfDiscount.com"><img
-                            src="https://images.golfdiscount.com/images/home/2022/category/home-220519-cobra-speedzone-2x.jpg"
+                            src="${combraSpeedZone}"
                             alt="Blowout Prices on Cobra Speedzone Woods at GolfDiscount.com"
                             style="max-width:100%; width:627px;" /></a>
                 </div>
@@ -172,7 +225,7 @@ export const data = `
                 <div class="grid12-12 banner">
                     <a href="https://www.golfdiscount.com/featured-products/brand/cobra/irons"
                         title="Closeout Cobra KING Forged Tec and MIM Tour Irons at GolfDiscount.com"><img
-                            src="https://images.golfdiscount.com/images/home/2022/category/home-220606-cobra-irons.jpg"
+                            src="${cobraIrons}"
                             alt="Shop Closeout Cobra KING Forged Tec and MIM Tour Irons at GolfDiscount.com" /></a>
                 </div>
             </div>
@@ -183,14 +236,14 @@ export const data = `
                 <div class="grid12-6">
                     <a href="https://www.golfdiscount.com/golf-balls/brands/taylormade/tp5/pix-bacon-and-eggs"
                         title="Shop TaylorMade TP5 Breakfast Golf Balls at GolfDiscount.com"><img
-                            src="https://images.golfdiscount.com/images/home/2022/category/home-220722-tm-tp5-breakfast.jpg"
+                            src="${breakfast}"
                             alt="Shop TaylorMade TP5 Breakfast Golf Balls at GolfDiscount.com"
                             style="max-width:100%; width:627px;" /></a>
                 </div>
                 <div class="grid12-6 margin-center">
                     <a href="https://www.golfdiscount.com/golf-balls/brands/taylormade/tour-response-stripe"
                         title="TaylorMade Tour Response Stripe Golf Balls at GolfDiscount.com"><img
-                            src="https://images.golfdiscount.com/images/home/2022/category/home-220722-tm-tour-response-stripe.jpg"
+                            src="${responseStripe}"
                             alt="TaylorMade Tour Response Stripe Golf Balls at GolfDiscount.com"
                             style="max-width:100%; width:627px;" /></a>
                 </div>
@@ -202,7 +255,7 @@ export const data = `
                 <div class="grid12-12 banner">
                     <a href="https://www.golfdiscount.com/brand/skechers/closeouts"
                         title="Closeout Skechers Golf Shoes"><img
-                            src="https://images.golfdiscount.com/images/home/2022/category/home-220722-skechers-closeout.jpg"
+                            src="${skechers}"
                             alt="Closeut Skechers Golf Shoes at GolfDiscount.com" /></a>
                 </div>
             </div>
@@ -213,14 +266,14 @@ export const data = `
                 <div class="grid12-6">
                     <a href="https://www.golfdiscount.com/closeouts/golf-clubs"
                         title="Closeout Golf Clubs at Golf Discount"> <img
-                            src="https://images.golfdiscount.com/images/home/2022/category/home-220104-golf-clubs.jpg"
+                            src="${golfClubs}"
                             alt="Closeout Golf Clubs at GolfDiscount.com"
                             style="max-width:100%; width:627px;" /></a>
                 </div>
                 <div class="grid12-6 margin-center">
                     <a href="https://www.golfdiscount.com/closeouts/golf-balls"
                         title="Golf Ball Deals at Golf Discount"> <img
-                            src="https://images.golfdiscount.com/images/home/2022/category/home-220104-golf-balls.jpg"
+                            src="${golfBalls}"
                             alt="Closeout Golf Balls at GolfDiscount.com"
                             style="max-width:100%; width:627px;" /></a>
                 </div>
@@ -231,14 +284,14 @@ export const data = `
                 <div class="grid12-6">
                     <a href="https://www.golfdiscount.com/closeouts/apparel"
                         title="Closeout Golf Apparel at Golf Discount"><img
-                            src="https://images.golfdiscount.com/images/home/2022/category/home-220104-apparel.jpg"
+                            src="${homeApparel}"
                             alt="Closeout Golf Apparel at GolfDiscount.com"
                             style="max-width:100%; width:627px;" /></a>
                 </div>
                 <div class="grid12-6 margin-center">
                     <a href="https://www.golfdiscount.com/closeouts/golf-shoes"
                         title="Closeout Golf Shoes at Golf Discount"><img
-                            src="https://images.golfdiscount.com/images/home/2022/category/home-220104-golf-shoes.jpg"
+                            src="${golfShoes}"
                             alt="Closeout Golf Shoes at GolfDiscount.com"
                             style="max-width:100%; width:627px;" /> </a>
                 </div>
@@ -256,7 +309,7 @@ export const data = `
                             href="https://www.golfdiscount.com/closeouts/golf-clubs"
                             title="Closeout Golf Clubs"> <img alt="Discount Golf Clubs"
                                 class="closeout-golf-clubs-img"
-                                src="https://images.golfdiscount.com/images/home/2021/closeouts/home-closeout-golf-clubs-20211223.jpg" />
+                                src="${closeoutGoldClubs}" />
                             <h4 class="closeout-golf-clubs-link">Closeout Golf Clubs</h4>
                         </a>
                     </div>
@@ -266,7 +319,7 @@ export const data = `
                             href="https://www.golfdiscount.com/closeouts/golf-bags"
                             title="Closeout Golf Bags"> <img alt="Discount Golf Bags"
                                 class="closeout-golf-bags-img"
-                                src="https://www.golfdiscount.com/media/wysiwyg/category/closeouts/closeouts-bags_1.jpg" />
+                                src="${closeoutBags}" />
                             <h4 class="closeout-golf-bags-link">Closeout Golf Bags</h4>
                         </a>
                     </div>
@@ -275,7 +328,7 @@ export const data = `
                             title="Closeout Apparel"></a><a
                             href="https://www.golfdiscount.com/closeouts/apparel" title="Closeout Apparel">
                             <img alt="Discount Golf Apparel" class="closeout-apparel-img"
-                                src="https://www.golfdiscount.com/media/wysiwyg/category/closeouts/closeouts-apparel.jpg" />
+                                src="${closeoutApparel}" />
                             <h4 class="closeout-apparel-link">Closeout Apparel</h4>
                         </a>
                     </div>
@@ -285,7 +338,7 @@ export const data = `
                             href="https://www.golfdiscount.com/closeouts/golf-balls"
                             title="Closeout Golf Balls"> <img alt="Discount Golf Balls"
                                 class="closeout-balls-img"
-                                src="https://images.golfdiscount.com/images/home/2021/closeouts/home-closeout-golf-balls-20211223.jpg" />
+                                src="${closeoutGolfBalls}" />
                             <h4 class="closeout-balls-link">Closeout Golf Balls</h4>
                         </a>
                     </div>
@@ -295,7 +348,7 @@ export const data = `
                             href="https://www.golfdiscount.com/closeouts/golf-shoes"
                             title="Closeout Golf Shoes"> <img alt="Discount Golf Shoes"
                                 class="closeout-shoes-img"
-                                src="https://images.golfdiscount.com/images/home/2021/closeouts/home-closeout-golf-shoes-20211223.jpg" />
+                                src="${closeoutGolfShoes}" />
                             <h4 class="closeout-shoes-link">Closeout Golf Shoes</h4>
                         </a>
                     </div>
@@ -306,7 +359,7 @@ export const data = `
                             title="Closeout Gloves and Accessories"> <img
                                 alt="Discount Golf Gloves and Accessories"
                                 class="closeout-golf-accessories-img"
-                                src="https://www.golfdiscount.com/media/wysiwyg/category/closeouts/accessories_golf_glove.jpg" />
+                                src="${accessoriesGloveGolf}" />
                             <h4 class="closeout-golf-accessories-link">Closeout Accessories</h4>
                         </a>
                     </div>
@@ -320,7 +373,7 @@ export const data = `
                 <div class="list">
                     <a href="golf-clubs" title="Golf Clubs"></a><a href="golf-clubs" title="Golf Clubs">
                         <img alt="Shop by Category - Golf Clubs" class="thumb"
-                            src="https://www.golfdiscount.com/media/wysiwyg/infortis/ultimo/home/category-icons/clubs.jpg" /></a>
+                            src="${clubs}" /></a>
                     <h2 class="golf-clubs-list-link">Golf Clubs</h2>
                     <ul>
                         <li>
@@ -360,7 +413,7 @@ export const data = `
                 <div class="list">
                     <a href="golf-bags" title="Golf Bags"></a><a href="golf-bags" title="Golf Bags"> <img
                             alt="Shop by Category - Golf Bags" class="thumb"
-                            src="https://www.golfdiscount.com/media/wysiwyg/infortis/ultimo/home/category-icons/bags.jpg" /></a>
+                            src="${bags}" /></a>
                     <h2 class="bags-list-link">Golf Bags</h2>
                     <ul>
                         <li>
@@ -384,7 +437,7 @@ export const data = `
                 <div class="list">
                     <a href="golf-balls" title="Golf Balls"></a><a href="golf-balls" title="Golf Balls">
                         <img alt="Shop by Category - Golf Balls" class="thumb"
-                            src="https://www.golfdiscount.com/media/wysiwyg/infortis/ultimo/home/category-icons/balls2.jpg" /></a>
+                            src="${balls2}" /></a>
                     <h2 class="balls-list-link">Golf Balls</h2>
                     <ul>
                         <li>
@@ -420,7 +473,7 @@ export const data = `
                 <div class="list">
                     <a href="shoes" title="Golf Shoes"></a><a href="shoes" title="Golf Shoes"> <img
                             alt="Shop by Category - Golf Shoes" class="thumb"
-                            src="https://www.golfdiscount.com/media/wysiwyg/infortis/ultimo/home/category-icons/shoes.jpg" /></a>
+                            src="${shoes}" /></a>
                     <h2>Golf Shoes</h2>
                     <ul>
                         <li>
@@ -438,58 +491,58 @@ export const data = `
                     </ul>
                 </div>
                 <div class="list">
-                    <a href="apparel" title="Apparel"></a><a href="apparel" title="Apparel"> <img
-                            alt="Shop by Category - Apparel" class="thumb"
-                            src="https://www.golfdiscount.com/media/wysiwyg/infortis/ultimo/home/category-icons/apparel.jpg" /></a>
-                    <h2>Apparel</h2>
-                    <ul>
-                        <li>
-                            <h3 class="headwear-list"><a href="apparel/accessories/headwear"
-                                    title="Golf Headwear">Headwear</a></h3>
-                        </li>
-                        <li>
-                            <h3 class="outerwear-list"><a href="apparel/outerwear"
-                                    title="Golf Outerwear">Outerwear</a></h3>
-                        </li>
-                        <li>
-                            <h3 class="pants-list"><a href="apparel/mens/pants" title="Golf Pants">Pants</a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3 class="shorts-list"><a href="apparel/mens/shorts"
-                                    title="Golf Shorts">Shorts</a></h3>
-                        </li>
-                        <li>
-                            <h3 class="shirts-list"><a href="apparel/mens/polos"
-                                    title="Golf Shirts">Shirts</a></h3>
-                        </li>
-                        <li>
-                            <h3 class="belts-list"><a href="apparel/accessories/belts"
-                                    title="Golf Belts">Belts</a></h3>
-                        </li>
-                        <li>
-                            <h3 class="eyewear-list"><a href="apparel/accessories/eyewear"
-                                    title="Golf Eyewear">Eyewear</a></h3>
-                        </li>
-                        <li>
-                            <h3 class="socks-list"><a href="apparel/accessories/socks"
-                                    title="Golf Socks">Socks</a></h3>
-                        </li>
-                        <li>
-                            <h3 class="gloves-list"><a href="accessories/on-course/gloves"
-                                    title="Golf Gloves">Gloves</a></h3>
-                        </li>
-                        <li>
-                            <h3 class="apparel-closeouts-list"><a href="closeouts/apparel"
-                                    title="Golf Apparel Closeouts">Closeout Apparel</a></h3>
-                        </li>
-                    </ul>
-                </div>
+                <a href="apparel" title="Apparel"></a><a href="apparel" title="Apparel"> <img
+                        alt="Shop by Category - Apparel" class="thumb"
+                        src="${apparel}" /></a>
+                <h2>Apparel</h2>
+                <ul>
+                    <li>
+                        <h3 class="headwear-list"><a href="apparel/accessories/headwear"
+                                title="Golf Headwear">Headwear</a></h3>
+                    </li>
+                    <li>
+                        <h3 class="outerwear-list"><a href="apparel/outerwear"
+                                title="Golf Outerwear">Outerwear</a></h3>
+                    </li>
+                    <li>
+                        <h3 class="pants-list"><a href="apparel/mens/pants" title="Golf Pants">Pants</a>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3 class="shorts-list"><a href="apparel/mens/shorts"
+                                title="Golf Shorts">Shorts</a></h3>
+                    </li>
+                    <li>
+                        <h3 class="shirts-list"><a href="apparel/mens/polos"
+                                title="Golf Shirts">Shirts</a></h3>
+                    </li>
+                    <li>
+                        <h3 class="belts-list"><a href="apparel/accessories/belts"
+                                title="Golf Belts">Belts</a></h3>
+                    </li>
+                    <li>
+                        <h3 class="eyewear-list"><a href="apparel/accessories/eyewear"
+                                title="Golf Eyewear">Eyewear</a></h3>
+                    </li>
+                    <li>
+                        <h3 class="socks-list"><a href="apparel/accessories/socks"
+                                title="Golf Socks">Socks</a></h3>
+                    </li>
+                    <li>
+                        <h3 class="gloves-list"><a href="accessories/on-course/gloves"
+                                title="Golf Gloves">Gloves</a></h3>
+                    </li>
+                    <li>
+                        <h3 class="apparel-closeouts-list"><a href="closeouts/apparel"
+                                title="Golf Apparel Closeouts">Closeout Apparel</a></h3>
+                    </li>
+                </ul>
+            </div>
                 <div class="list">
                     <a href="rangefinders" title="GPS &amp; Rangefinders"></a><a href="rangefinders"
                         title="GPS &amp; Rangefinders"> <img alt="Shop by Category - Rangefinders"
                             class="thumb"
-                            src="https://www.golfdiscount.com/media/wysiwyg/infortis/ultimo/home/category-icons/rangefinder.jpg" /></a>
+                            src="${rangeFinder}" /></a>
                     <h2>Rangefinders</h2>
                     <ul>
                         <li>
@@ -527,7 +580,7 @@ export const data = `
                 <div class="list">
                     <a href="accessories" title="Golf Accessories"></a><a href="accessories"
                         title="Golf Accessories"> <img alt="Shop by Category - Accessories" class="thumb"
-                            src="https://www.golfdiscount.com/media/wysiwyg/infortis/ultimo/home/category-icons/gloves.jpg" /></a>
+                            src="${gloves}" /></a>
                     <h2>Accessories</h2>
                     <ul>
                         <li>
@@ -551,7 +604,7 @@ export const data = `
                 <div class="list">
                     <a href="brand" title="Top Golf Brands"></a><a href="brand" title="Top Golf Brands">
                         <img alt="Shop by Category - Top Golf Brands" class="thumb"
-                            src="https://www.golfdiscount.com/media/wysiwyg/infortis/ultimo/home/category-icons/brands.jpg" /></a>
+                            src="${brands}" /></a>
                     <h2>Top Brands</h2>
                     <ul>
                         <li>
@@ -587,6 +640,7 @@ export const data = `
                     </ul>
                 </div>
             </div>
+            
             <!-- TOP BRANDS -->
             <div class="nested-container hide-below-768" style="margin: 45px 0 45px 0;">
                 <h2 style="text-align: center;">Authorized Retailer of the Best Brands in Golf</h2>
@@ -594,61 +648,61 @@ export const data = `
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/adidas" title=" adidas Golf"><img
                                 alt="adidas" class="fade-on-hover"
-                                src="https://www.golfdiscount.com/media/wysiwyg/infortis/brands/adidas.jpg" /></a>
+                                src="${adidas}" /></a>
                     </div>
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/bridgestone"><img alt="Bridgestone"
                                 class="fade-on-hover"
-                                src="https://www.golfdiscount.com/media/wysiwyg/infortis/brands/bridgestone.jpg" /></a>
+                                src="${bridgestone}" /></a>
                     </div>
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/callaway"><img alt="callaway"
                                 class="fade-on-hover"
-                                src="https://www.golfdiscount.com/media/wysiwyg/infortis/brands/callaway.jpg" /></a>
+                                src="${callaway}" /></a>
                     </div>
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/cleveland"><img alt="cleveland"
                                 class="fade-on-hover"
-                                src="https://www.golfdiscount.com/media/wysiwyg/infortis/brands/cleveland.jpg" /></a>
+                                src="${cleveland2}" /></a>
                     </div>
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/cobra"><img alt="cobra"
                                 class="fade-on-hover"
-                                src="https://images.golfdiscount.com/images/home/2022/brand/cobra-2022.jpg" /></a>
+                                src="${cobra2022}" /></a>
                     </div>
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/footjoy"><img alt="FootJoy"
                                 class="fade-on-hover"
-                                src="https://www.golfdiscount.com/media/wysiwyg/infortis/brands/footjoy.jpg" /></a>
+                                src="${footjoy}" /></a>
                     </div>
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/nike"><img alt="Nike"
                                 class="fade-on-hover"
-                                src="https://www.golfdiscount.com/media/wysiwyg/ads/nike_swoosh_black-SMALL_2.png" /></a>
+                                src="${nikeSwoosh}" /></a>
                     </div>
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/ping"><img alt="PING"
                                 class="fade-on-hover"
-                                src="https://www.golfdiscount.com/media/wysiwyg/infortis/brands/ping.jpg" /></a>
+                                src="${ping2}" /></a>
                     </div>
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/taylormade"><img alt="TaylorMade"
                                 class="fade-on-hover"
-                                src="https://www.golfdiscount.com/media/wysiwyg/infortis/brands/taylormade.jpg" /></a>
+                                src="${taylormade}" /></a>
                     </div>
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/titleist"><img alt="Titleist"
                                 class="fade-on-hover"
-                                src="https://www.golfdiscount.com/media/wysiwyg/infortis/brands/titleist.jpg" /></a>
+                                src="${titleist}" /></a>
                     </div>
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/tour-edge"><img alt="Tour Edge"
                                 class="fade-on-hover"
-                                src="https://images.golfdiscount.com/images/home/2022/brand/tour_edge-2022.jpg" /></a>
+                                src="${tourEdge}" /></a>
                     </div>
                     <div class="grid12-2" style="text-align: center;">
                         <a href="https://www.golfdiscount.com/brand/wilson-staff"><img alt="Wilson Golf"
-                                src="https://www.golfdiscount.com/media/wysiwyg/infortis/brands/wilson.JPG" /></a>
+                                src="${wilson}" /></a>
                     </div>
                 </div>
             </div>
@@ -685,7 +739,7 @@ export const data = `
             <li class="mm-searchspring-product-list-item mm-searchspring-discounted">
                 <div class="mm-searchspring-product-image"><a
                         href="https://www.golfdiscount.com/adidas-ultimate365-shorts"><img
-                            src="https://www.golfdiscount.com/media/catalog/product/cache/f27342097bb2abb3a49036542fcec024/g/o/golf-apparel-adidas-ultimate365-shorts-black.jpg"
+                            src="${shortsBlack}"
                             alt="Adidas Ultimate365 Shorts"></a></div>
                 <div class="mm-searchspring-product-info"><a
                         href="https://www.golfdiscount.com/adidas-ultimate365-shorts">
@@ -701,7 +755,7 @@ export const data = `
             <li class="mm-searchspring-product-list-item mm-searchspring-discounted">
                 <div class="mm-searchspring-product-image"><a
                         href="https://www.golfdiscount.com/taylormade-sim-max-individual-iron"><img
-                            src="https://www.golfdiscount.com/media/catalog/product/cache/f27342097bb2abb3a49036542fcec024/t/a/taylormade-sim-sand-wedge-itempicture.jpg"
+                            src="${taylormadeSim}"
                             alt="TaylorMade SIM Max Individual Iron"></a></div>
                 <div class="mm-searchspring-product-info"><a
                         href="https://www.golfdiscount.com/taylormade-sim-max-individual-iron">
@@ -717,7 +771,7 @@ export const data = `
             <li class="mm-searchspring-product-list-item mm-searchspring-discounted">
                 <div class="mm-searchspring-product-image"><a
                         href="https://www.golfdiscount.com/taylormade-sim-max-irons"><img
-                            src="https://www.golfdiscount.com/media/catalog/product/cache/f27342097bb2abb3a49036542fcec024/g/o/golf-iron-taylormade-sim-max-angle-itempicture.jpg"
+                            src="${golfIronTaylormade}"
                             alt="TaylorMade SIM Max Irons"></a></div>
                 <div class="mm-searchspring-product-info"><a
                         href="https://www.golfdiscount.com/taylormade-sim-max-irons">
@@ -730,7 +784,7 @@ export const data = `
             <li class="mm-searchspring-product-list-item mm-searchspring-discounted">
                 <div class="mm-searchspring-product-image"><a
                         href="https://www.golfdiscount.com/callaway-2019-strata-12-piece-complete-set"><img
-                            src="https://www.golfdiscount.com/media/catalog/product/cache/f27342097bb2abb3a49036542fcec024/2/0/2019-callaway-strata-complete-set_02a.jpg"
+                            src="${strataCompleteSet}"
                             alt="Callaway 2019 Strata 12-Piece Complete Set"></a></div>
                 <div class="mm-searchspring-product-info"><a
                         href="https://www.golfdiscount.com/callaway-2019-strata-12-piece-complete-set">
@@ -743,7 +797,7 @@ export const data = `
             <li class="mm-searchspring-product-list-item mm-searchspring-discounted">
                 <div class="mm-searchspring-product-image"><a
                         href="https://www.golfdiscount.com/catalog/product/view/id/186606/s/taylormade-tp5x-practice-bagged-golf-balls/"><img
-                            src="https://www.golfdiscount.com/media/catalog/product/cache/f27342097bb2abb3a49036542fcec024/g/o/golf-balls-taylormade-tp5x-bagged-practice-balls-white-itempicture.jpg"
+                            src="${baggedPracticeBalls}"
                             alt="TaylorMade 2019 TP5x Practice Bagged Golf Balls"></a></div>
                 <div class="mm-searchspring-product-info"><a
                         href="https://www.golfdiscount.com/catalog/product/view/id/186606/s/taylormade-tp5x-practice-bagged-golf-balls/">

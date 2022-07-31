@@ -8,16 +8,27 @@
     width: auto;
 }
 
+.topContent{
+    display: grid;
+    padding-top: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'GolfImage SearchBar TrackOrder';
+}
+
 .logo{
     max-width: 70%;
+    grid-area: GolfImage;
 }
 .logo img{
     display: block;
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
     border: 0;
     width: 170px;
     height: 46px;
+    max-width: unset;
 }
 
 ul .trackOrder{
@@ -25,7 +36,7 @@ ul .trackOrder{
 }
 
 .trackOrder{
-    
+    grid-area: TrackOrder;
     float: right;
     padding-left: 15px;
 }
@@ -44,7 +55,9 @@ ul .trackOrder{
 }
 
 .searchBar{
-    width: 790px;
+    max-width: 790px;
+    width: 100%;
+    grid-area: SearchBar;
 }
  .searchBar{
     float: right;
@@ -95,12 +108,7 @@ form{
     vertical-align: top;
     padding-left: 5px;
 }
-.topContent{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
-}
+
 .linksCont{
     text-decoration: none;
 }
@@ -118,4 +126,20 @@ form{
         display: inline-block;
     position: relative;
     float: right;
+}
+
+
+@media (max-width: 1280px) {
+    .topContent{
+        display: grid;
+        padding-top: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'GolfImage TrackOrder'
+        'SearchBar SearchBar';
+    }
+    .searchBar {
+        justify-self: flex-end;
+    }
 }

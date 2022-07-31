@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './footerTop.module.css';
-
+import img from '../../../../assets/pics/badge.png';
 
 function FooterContact() {
     return (
@@ -55,7 +55,7 @@ function FooterContact() {
                 </div>
                 <div className={classes.yotpo}>
                     <div className={classes.yotpoWrapper}>
-                        <img src="//staticw2.yotpo.com/assets/badge.png" className={classes.badgeImage} alt="28.1K" tabIndex="0" />
+                        <img src={img} className={classes.badgeImage} alt="28.1K" tabIndex="0" />
                         <div className={classes.badgeRewievs}>28.1K</div>
                         <span className={classes.badgeStars}>
                             <span className={classes.yotpoIcon}></span>

@@ -1,12 +1,13 @@
 import classes from './headerContent.module.css';
 import MegaMenu from '../MegaMenu';
+import img from '../../../assets/pics/gd_logo.jpg';
 
 const HeaderContent = () => {
     return (
         <div className={classes.contentHeaderStyle}>
             <div className={classes.topContent}>
                 <a className={classes.logo} href="https://www.golfdiscount.com/" >
-                    <img src="https://www.golfdiscount.com/media/logo/stores/1/gd_logo_4.png" alt='gd_logo' />
+                    <img src={img} alt='gd_logo' />
                 </a>
                 {/*to do minicart useState and must me separated component */}
                 <div className={classes.searchBar}>
