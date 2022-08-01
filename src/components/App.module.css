@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+ .app {
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    transition: left 0.3s;
+ }
+
+ .appOffset {
+    composes: app;
+    left: calc(100% - 54px);
+ }
+}

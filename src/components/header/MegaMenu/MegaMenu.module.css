@@ -1,4 +1,5 @@
-.megaMenu li, .megaMenu ul {
+.megaMenu li,
+.megaMenu ul {
     margin: 0;
     padding: 0;
 }
@@ -38,7 +39,7 @@
     top: 0;
 }
 
-.firstLevelBlock{
+.firstLevelBlock {
     display: inline-block;
     vertical-align: top;
     padding-top: 0;
@@ -65,11 +66,11 @@
 
 }
 
-.secondLevel{
+.secondLevel {
     margin-top: 10px;
 }
 
-.linkToAll{
+.linkToAll {
     font-size: 15px;
     font-family: Bitter, georgia, serif;
     text-transform: uppercase;
@@ -79,13 +80,13 @@
     color: black;
 }
 
-.linkToAll a{
+.linkToAll a {
     text-decoration: none;
     color: black;
 }
 
 
-.secondLevel a{
+.secondLevel a {
     background: url(../../../assets/pics/bullet.png) 3px 6px no-repeat;
     padding-left: 15px;
     transition: background-position 150ms ease-out;
@@ -113,7 +114,7 @@
 
 
 
-.megaMenuSubmenu{
+.megaMenuSubmenu {
     z-index: 9999;
     visibility: hidden;
     position: absolute;
@@ -134,13 +135,13 @@
     color: black;
 }
 
-.navigationMenu{
+.navigationMenu {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
-.navigationMenu li{
+.navigationMenu li {
     padding: 0 5px 0 12px;
 }
 
@@ -148,11 +149,11 @@
     visibility: visible;
 }
 
-.navigationMenu li:last-child{
+.navigationMenu li:last-child {
     background: red;
 }
 
-.headerLink > a{
+.headerLink>a {
     padding-right: 10px;
     font-family: Open Sans;
     text-decoration: none;
@@ -162,20 +163,273 @@
     text-transform: uppercase;
 }
 
+.contentLinksPanel {
+    padding: 0;
+    margin: 0;
+    display: block;
+    padding-top: 1rem;
+    /* margin-bottom: 1rem; */
+}
+
+.contentLinks {
+    margin: 0;
+    padding: 0;
+    list-style: none none;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contentLinks li {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 5px;
+}
+
+.linksCont {
+    text-decoration: none;
+}
+
 
 .headerLink>a>span {
     color: #fff;
 }
 
-.navigationMenu{
+.navigationMenu {
     margin: 0;
     padding: 0;
 }
 
 .opener {
-    margin-right: 5px;;
+    margin-right: 5px;
 }
 
-.navigationMenu li:not(:last-child):hover{
+.navigationMenu li:not(:last-child):hover {
+    cursor: pointer;
     background: #036;
+}
+
+.contentLinksPanelOffset {
+    composes: contentLinksPanel;
+}
+
+.headerLink a:hover {
+    text-decoration: none;
+}
+
+.menuNavTop {
+    display: none;
+}
+
+.openerActive {
+    composes: opener;
+}
+
+.megaMenuSubmenuActive {
+    composes: megaMenuSubmenu;
+}
+
+.secondLevelActive{
+    composes: secondLevel;
+}
+
+@media (max-width: 768px) {
+    .contentLinksPanel {
+        transition: left .3s;
+        height: 100%;
+        left: calc(-1 * (100% - 54px));
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        width: calc(100% - 54px);
+    }
+
+    .contentLinksPanelOffset {
+        box-shadow: 0 0 5px 0 rgb(50 50 50 / 75%);
+        left: 0;
+        z-index: 99;
+        transition: left .3s;
+        height: 100%;
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        width: calc(100% - 54px);
+        background: #f0f0f0;
+    }
+
+    .navigationMenu {
+        display: block;
+        padding: 0;
+    }
+
+    .megaMenuSubmenu {
+        position: static;
+        display: none;
+    }
+
+    .megaMenu {
+        background: #fff;
+        border-bottom: 1px solid #d1d1d1;
+        ;
+    }
+
+    .headerLink>a>span {
+        color: #000;
+    }
+
+    .megaMenu {
+        padding: 0;
+    }
+
+    .headerLink {
+        border-top: 1px solid #d1d1d1;
+
+    }
+
+
+    .navigationMenu li:not(:last-child):hover {
+        background: transparent;
+    }
+
+    .navigationMenu li:last-child {
+        cursor: pointer;
+        background: transparent;
+    }
+
+    .headerLink {
+        position: relative;
+    }
+
+    .menuNavTop {
+        background: black;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menuNavTop div:first-child{
+        flex-grow: 1;
+        background-color: #000!important;
+        color: #fff!important;
+        text-align: center;
+        display: block;
+        font-size: 15px;
+        text-transform: uppercase;
+        line-height: 18px;
+        font-weight: 900;
+        letter-spacing: .5px;
+        text-align: center;
+    }
+
+    .menuNavCloseFirst {
+        background-color: #069;
+        width: 45px;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.42857143;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    .opener {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        cursor: pointer;
+        width: 49px;
+        height: 49px;
+        background-image: url(../../../assets/pics/opener.png);
+
+    }
+
+    .openerActive {
+        background-image: url(../../../assets/pics/opener-active.png);
+    }
+
+    .megaMenuSubmenuActive {
+        display: block;
+        padding: 0;
+    }
+
+    .navigationMenu li {
+        padding: 0;
+    }
+
+    .megaMenuSubmenu {
+        visibility: visible;
+        border-top: none;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .firstLevelBlock {
+        /* height: 49px; */
+        padding: 0;
+        display: block;
+        position: relative;
+        width: 100%;
+        font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.42857143;
+        font-size: 1.4rem;
+        border-top: 1px solid #d1d1d1
+    }
+
+    .firstLevelBlock a{
+        line-height: 49px;
+    }
+
+    .megaMenuSubmenu {
+        padding-right: 0;
+    }
+
+    .headerLink {
+        padding-right: 0;
+    }
+
+    .secondLevel {
+        display: none;
+    }
+
+    .secondLevelActive {
+        margin-top: 0;
+        display: block;
+    }
+
+    .headerLink a {
+        padding-left: 15px;
+    }
+
+    .firstLevelBlock a {
+        padding-left: 30px;
+    }
+
+    .firstLevelBlock span {
+        font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .lastFloor a {
+        padding: 0;
+        padding-left: 45px;
+        background: none;
+        display: block;
+    }
+
+    .lastFloor span {
+        font-size: 1.6rem;
+        color: #575757;
+    }
+
+    .contentLinks a{
+        color: transparent;
+    }
 }

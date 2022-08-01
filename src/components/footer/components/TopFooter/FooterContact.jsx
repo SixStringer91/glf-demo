@@ -29,10 +29,10 @@ function FooterContact() {
                     <div className={classes.bullet}>
                         <div className={classes.feature}>
                             <span className={classes.phoneIcon}></span>
-                            <p className={classes.noMargin}>
+                            <div className={classes.noMargin}>
                                 Call Us 1.800.394.GOLF (4653)
                                 <p> M-F 6-4 PST - SAT-SUN 8-4</p>
-                            </p>
+                            </div>
                         </div>
                         <div className={classes.feature}>
                             <span className={classes.letter}></span>

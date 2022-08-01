@@ -31,23 +31,23 @@ const FooterWhy = () => {
             <div className={classes.bullet}>
                 <div className={classes.feature}>
                     <span className={classes.icon}>1</span>
-                    <p className={classes.noMargin}>
+                    <div className={classes.noMargin}>
                         <strong>Guaranteed Lowest Price</strong>
-                        <p> We match all authorized retailers</p></p>
+                        <p> We match all authorized retailers</p></div>
                 </div>
                 <div className={classes.feature}>
                     <span className={classes.icon}>2</span>
-                    <p className={classes.noMargin}>
+                    <div className={classes.noMargin}>
                         <strong>FREE Shipping on orders over $99</strong>
                         <p>*Some exclusions apply</p>
-                    </p>
+                    </div>
                 </div>
                 <div className={classes.feature}>
                     <span className={classes.icon}>3</span>
-                    <p className={classes.noMargin}>
+                    <div className={classes.noMargin}>
                         <strong>Excellent Customer Service</strong>
                         <p>5 Star Google Rating</p>
-                    </p>
+                    </div>
                 </div>
             </div>
         </>

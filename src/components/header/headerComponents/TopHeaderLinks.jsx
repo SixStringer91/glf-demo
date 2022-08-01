@@ -16,7 +16,7 @@ const TopHeaderLinks = () => {
             </a>
         </div>
         <div className={classes.helpDesk}>
-            <div class={classes.rightLinks}><a href="https://www.golfdiscount.com/return/">
+            <div className={classes.rightLinks}><a href="https://www.golfdiscount.com/return/">
                 <strong>
                     Shop With Confidence:</strong> Hassle Free Returns!</a>
                 <a href="https://www.golfdiscount.com/help_desk/"><strong>Have A Question?</strong> Visit Our

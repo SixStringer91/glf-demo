@@ -2,11 +2,23 @@ import classes from './headerContent.module.css';
 import MegaMenu from '../MegaMenu';
 import img from '../../../assets/pics/gd_logo.jpg';
 
-const HeaderContent = () => {
+const HeaderContent = ({ isOffset, toggle }) => {
+
+
+    const toggleClassname = isOffset
+        ? classes.navToggleOpen : classes.navToggle;
+
     return (
         <div className={classes.contentHeaderStyle}>
             <div className={classes.topContent}>
-                <a className={classes.logo} href="https://www.golfdiscount.com/" >
+                <span
+                    data-action="toggle-nav"
+                    onClick={toggle}
+                    className={[classes.action, toggleClassname].join(' ')}>
+                    <span>Toggle Nav</span>
+                </span>
+
+                <a className={classes.logo} href="https://www.golfdiscount.com/">
                     <img src={img} alt='gd_logo' />
                 </a>
                 {/*to do minicart useState and must me separated component */}
@@ -40,24 +52,15 @@ const HeaderContent = () => {
                         <a className={classes.trackOrderBtn} href="https://www.golfdiscount.com/track-your-order/">TRACK YOUR ORDER</a>
                     </div>
                     <div className={classes.miniCart}>
-                        <a className={classes.minicartIcon}></a>
+                        <a className={classes.minicartIcon}>
+
+                        </a>
                     </div>
                 </div>
 
             </div>
 
-
-            <div className={classes.contentLinksPanel}>
-                <ul className={classes.contentLinks}>
-                    <li>
-                        <a className={classes.linksCont} href="https://www.golfdiscount.com/gdgiftcard/"> Gift Cards</a>
-                    </li>
-                    <li>
-                        <a className={classes.linksCont} href="https://www.golfdiscount.com/customer/account/login/"> Log In</a>
-                    </li>
-                </ul>
-            </div>
-         <MegaMenu />
+            <MegaMenu isOffset={isOffset} toggle={toggle} />
         </div>
     )
 }

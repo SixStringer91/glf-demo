@@ -10,11 +10,11 @@
 
 .topContent{
     display: grid;
-    padding-top: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.25fr 1fr 0.1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
     'GolfImage SearchBar TrackOrder';
+    padding: 20px 0 0;
 }
 
 .logo{
@@ -27,7 +27,7 @@
     height: auto;
     border: 0;
     width: 170px;
-    height: 46px;
+    height: auto;
     max-width: unset;
 }
 
@@ -35,12 +35,15 @@ ul .trackOrder{
     margin-bottom: 0.5rem;
 }
 
-.trackOrder{
+.contentOrder{
     grid-area: TrackOrder;
-    float: right;
+    display: flex;
     padding-left: 15px;
+    justify-self: flex-end;
+    align-self: flex-end;
 }
 
+.trackOrder a:visited,
 .trackOrder a{
     background-color: darkred;
     color: white;
@@ -51,13 +54,20 @@ ul .trackOrder{
     padding: 0px;
     vertical-align: middle;
     line-height: 30px;
-    text-decoration: none;
+    text-decoration: none !important;
+}
+
+.trackOrder:hover a{
+    background-color: red;
+    color: yellow;
 }
 
 .searchBar{
     max-width: 790px;
     width: 100%;
+    justify-self: flex-end;
     grid-area: SearchBar;
+    align-self: flex-end;
 }
  .searchBar{
     float: right;
@@ -75,15 +85,65 @@ display: block;
 }
 
 .searchBtn{
-display: inline-block;
-
+    display: inline-block;
+    z-index: 1000;
+    border: 0;
+    box-shadow: none;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 400;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    background: none;
+    color: #333;
+    cursor: pointer;
+    font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-size: 1.4rem;
 }
+
 /* picture */
 .searchBtn::before{
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
     line-height: 32px;
     color: #757575;
-
+    content: '\e615';
+    font-family: 'luma-icons';
+    margin: 0;
+    vertical-align: top;
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
 }
+
+.searchBtn span {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.searchBtn:hover {
+    background: none;
+    border: none;
+}
+
+.searchBtn:hover::before{
+    color: #000;
+}
+
 form{
     display: block;
     margin-top: 0em;
@@ -123,9 +183,66 @@ form{
 }
 
 .miniCart{
-        display: inline-block;
+    display: inline-block;
     position: relative;
     float: right;
+    margin-left: 13px;
+}
+
+.minicartIcon {
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: #006bb4;
+    font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857143;
+    font-size: 1.4rem;
+}
+
+.minicartIcon:before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 22px;
+    line-height: 28px;
+    color: #757575;
+    content: '\e611';
+    font-family: luma-icons;
+    margin: 0;
+    vertical-align: top;
+    display: inline-block;
+    font-weight: 400;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+}
+
+
+.navToggle {
+    display: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0;
+    grid-area: 'NavToggle';
+}   
+
+.navToggle::before {
+    line-height: inherit;
+    color: #757575;
+    content: '\e609';
+    font-family: luma-icons;
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: 400;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+    font-size: 42px;
+    color: #000;
+    font-weight: 700;
+    margin-top: 0;
 }
 
 
@@ -141,5 +258,73 @@ form{
     }
     .searchBar {
         justify-self: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .topContent {
+        grid-template-columns: 0.5fr 1.5fr 0.5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        'NavToggle GolfImage TrackOrder'
+    }
+
+    .logo {
+        justify-self: center;
+    }
+
+    .contentOrder {
+        align-self: center;
+    }
+
+    .trackOrder a {
+        display: none;
+    }
+
+    .searchBar {
+        display: none;
+    }
+
+    .navToggle {
+        display: block;
+    }   
+
+    .navToggleOpen {
+        composes: navToggle
+    }
+
+    .navToggleOpen:after {
+            background: rgba(0,0,0,.7);
+            content: '';
+            display: block;
+            height: 100%;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+    }
+    .navToggleOpen { 
+        overflow: hidden; 
+    }
+
+    
+    .minicartIcon:before {
+        font-size: 38px;
+        line-height: 38px;
+    }
+
+    .topContent {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .logo {
+        align-self: center;
+    }
+
+    .logo img {
+        max-width: 170px;
+        width: 100%;
     }
 }
