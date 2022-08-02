@@ -3,6 +3,7 @@ import classes from './MegaMenu.module.css';
 import { megaMenuData, CATEGORIES } from './mega-menu-data';
 import { MAINLINK } from '../../../constants'
 import { Tabs } from '../../../ui-kit';
+import { Link } from 'react-router-dom';
 
 function MegaMenu({ isOffset, toggle }) {
 
@@ -19,43 +20,49 @@ function MegaMenu({ isOffset, toggle }) {
         selectedLabel: classes.TabLabelSelected,
     };
 
-    const data = useMemo(() => Array.from(megaMenuData.entries())
-        .map((el, i) => <MainFloor offset={isOffset} key={i} data={el} />), []);
-
-
     const [selectedId, setSelectedId] = useState(tabs[0].id);
+
+    const handleToggle = useCallback(
+        (e) => {
+            if (!isOffset && window.innerWidth <= 768) toggle()
+            e.stopPropagation();
+        }, [isOffset, toggle]
+    );
 
     const handleSetSelectedId = useCallback((id) => setSelectedId(id), [setSelectedId]);
 
     const contentLinkPanelClass = isOffset ? classes.contentLinksPanelOffset : classes.contentLinksPanel;
 
-    const contentLinksClass = selectedId === 2 
-    ? classes.contentLinksWrapper
-    : classes.contentLinksDisabled;
+    const data = useMemo(() => Array.from(megaMenuData.entries())
+        .map((el, i) => <MainFloor toggle={handleToggle} offset={isOffset} key={i} data={el} />), []);
 
-    const menuWrapperClass = selectedId === 1 
-     ? classes.menuNavWrapper
-     : classes.menuWrapperDisabled;
-    
+    const contentLinksClass = selectedId === 2
+        ? classes.contentLinksWrapper
+        : classes.contentLinksDisabled;
+
+    const menuWrapperClass = selectedId === 1
+        ? classes.menuNavWrapper
+        : classes.menuWrapperDisabled;
+
     return <>
         <div className={contentLinkPanelClass}>
             <Tabs
                 classNames={classNames}
-                selectedId={selectedId} 
+                selectedId={selectedId}
                 tabs={tabs}
                 onClick={handleSetSelectedId}
             />
             <div className={contentLinksClass}>
                 <ul className={classes.contentLinks}>
                     <li>
-                        <a className={classes.linksCont} href="https://www.golfdiscount.com/gdgiftcard/"> 
+                        <Link onClick={handleToggle} className={classes.linksCont} to={`${MAINLINK}/gdgiftcard/`}>
                             Gift Cards
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a className={classes.linksCont} href="https://www.golfdiscount.com/customer/account/login/"> 
+                        <Link onClick={handleToggle} className={classes.linksCont} to={`${MAINLINK}/customer/account/login/`}>
                             Log In
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -79,11 +86,11 @@ function MegaMenu({ isOffset, toggle }) {
 
 }
 
-const MainFloor = ({ data: [key, value], offset }) => {
+const MainFloor = ({ data: [key, value], toggle }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const secondFloor = Object.entries(value).map(([first, second], i) => {
-        return <FirstFlor key={`main-floor-${i}`} main={key} first={first} second={second} />
+        return <FirstFlor toggle={toggle} key={`main-floor-${i}`} main={key} first={first} second={second} />
     })
 
 
@@ -97,26 +104,26 @@ const MainFloor = ({ data: [key, value], offset }) => {
     const megaMenuSubmenuClassname = isOpen ? classes.megaMenuSubmenuActive : classes.megaMenuSubmenu;
 
     return <li className={classes.headerLink}>
-        <a href={[MAINLINK, key].join('/').replaceAll(' ', '-')}>
+        <Link onClick={toggle} to={[MAINLINK, key].join('/').replaceAll(' ', '-')}>
             <span>
                 {key}
             </span>
-        </a>
+        </Link>
         <span onClick={handleIsOpen} className={openerClassName}>
             <div className={classes.roleAfterMenu} />
         </span>
         <div className={megaMenuSubmenuClassname}>
             {secondFloor}
             <div className={classes.linkToAll}>
-                <a href={[MAINLINK, key].join('/').replaceAll(' ', '-')}>
+                <Link onClick={toggle} to={[MAINLINK, key].join('/').replaceAll(' ', '-')}>
                     <span> Shop all {key}</span>
-                </a>
+                </Link>
             </div>
         </div>
     </li>
 }
 
-function FirstFlor({ main, first, second }) {
+function FirstFlor({ main, first, second, toggle }) {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -127,6 +134,7 @@ function FirstFlor({ main, first, second }) {
 
     const secondFloor = second.map((el, i) => (
         <SecondFlor
+            toggle={toggle}
             key={i}
             main={main}
             first={first}
@@ -138,11 +146,11 @@ function FirstFlor({ main, first, second }) {
     const openerClassname = isOpen ? classes.openerActive : classes.opener;
 
     return <div className={classes.firstLevelBlock}>
-        <a href={[MAINLINK, main, first].join('/').replaceAll(' ', '-')}>
+        <Link onClick={toggle} to={[MAINLINK, main, first].join('/').replaceAll(' ', '-')}>
             <span>
                 {first}
             </span>
-        </a>
+        </Link>
         <span onClick={handleIsOpen} className={openerClassname}>&nbsp;</span>
         <div className={secondLevelClassname}>
             {secondFloor}
@@ -152,14 +160,14 @@ function FirstFlor({ main, first, second }) {
 }
 
 
-function SecondFlor({ main, first, keyName }) {
+function SecondFlor({ main, first, keyName, toggle }) {
     const link = [MAINLINK, main, first, keyName].join('/').replaceAll(' ', '-');
     return <div className={classes.lastFloor}>
-        <a href={link}>
+        <Link onClick={toggle} to={link}>
             <span>
                 {keyName}
             </span>
-        </a>
+        </Link>
     </div>
 }
 

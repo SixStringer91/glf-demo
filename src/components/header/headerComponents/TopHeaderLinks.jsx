@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { MAINLINK } from '../../../constants';
 import classes from './TopHeaderLinks.module.css';
 
 const TopHeaderLinks = () => {
@@ -9,17 +11,19 @@ const TopHeaderLinks = () => {
                 Call 1.800.394.GOLF (4653)
             </a>
             |
-            <a href="https://www.golfdiscount.com/blog">Golf Blog</a>
+            <Link to={`${MAINLINK}/blog`}>Golf Blog</Link>
             |
-            <a href="https://www.golfdiscount.com//golf-clubs/pre-owned">
+            <Link to={`${MAINLINK}/golf-clubs/pre-owned`}>
                 Pre-Owned Golf Clubs
-            </a>
+            </Link>
         </div>
         <div className={classes.helpDesk}>
-            <div className={classes.rightLinks}><a href="https://www.golfdiscount.com/return/">
-                <strong>
-                    Shop With Confidence:</strong> Hassle Free Returns!</a>
-                <a href="https://www.golfdiscount.com/help_desk/"><strong>Have A Question?</strong> Visit Our
+            <div className={classes.rightLinks}>
+                <Link to={`${MAINLINK}/return/`}>
+                    <strong>
+                        Shop With Confidence:</strong> Hassle Free Returns!
+                </Link>
+                <a href={`${MAINLINK}/help_desk/`}><strong>Have A Question?</strong> Visit Our
                     Help Desk</a></div>
         </div>
     </div>

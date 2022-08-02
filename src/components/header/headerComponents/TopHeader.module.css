@@ -49,6 +49,10 @@
     margin-left: 5px;
 }
 
+.linksOnTop a:hover {
+    color: #fff;
+}
+
 @media (max-width:768px) {
     .topHeaderStyle {
         padding: 0 15px;

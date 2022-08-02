@@ -234,9 +234,13 @@
 }
 
 .TabsRoot {
-    display: none !important;
+    display: none;
 }
 
+
+.megaMenuSubmenuActive {
+    composes: megaMenuSubmenu;
+}
 
 
 @media (max-width: 768px) {
@@ -417,8 +421,13 @@
         padding-right: 0;
     }
 
+
     .secondLevel {
         display: none;
+    }
+
+    .secondLevel a:hover {
+        background: none;
     }
 
     .secondLevelActive {

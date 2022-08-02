@@ -6,7 +6,7 @@ import classes from './footer.module.css';
 
 const Footer = () => {
     return (
-        <div className={classes.footer}>
+        <footer className={classes.footer}>
             <div className={classes.footerContent}>
                 <TopFooter />
                 <FooterLinksPanel />
@@ -14,7 +14,7 @@ const Footer = () => {
             <div className={classes.copyright}>
                 <span>© 2022 GolfDiscount.com, a division of Pro Golf Discount, Inc. All Rights Reserved.</span>
             </div>
-        </div>
+        </footer>
     )
 }
 export default Footer;

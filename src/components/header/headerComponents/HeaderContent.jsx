@@ -1,10 +1,10 @@
 import classes from './headerContent.module.css';
 import MegaMenu from '../MegaMenu';
 import img from '../../../assets/pics/gd_logo.jpg';
+import { MAINLINK } from '../../../constants';
+import { Link } from 'react-router-dom';
 
 const HeaderContent = ({ isOffset, toggle }) => {
-
-
     const toggleClassname = isOffset
         ? classes.navToggleOpen : classes.navToggle;
 
@@ -18,9 +18,9 @@ const HeaderContent = ({ isOffset, toggle }) => {
                     <span>Toggle Nav</span>
                 </span>
 
-                <a className={classes.logo} href="https://www.golfdiscount.com/">
+                <Link className={classes.logo} to={`${MAINLINK}`}>
                     <img src={img} alt='gd_logo' />
-                </a>
+                </Link>
                 {/*to do minicart useState and must me separated component */}
                 <div className={classes.searchBar}>
                     <div className={classes.searchContent}>

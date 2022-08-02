@@ -4,17 +4,122 @@
 
 
 .slickSlider {
+    position: relative;
     padding: 0;
 }
 
-.carouselBlock{
+.carouselBlock {
     margin-bottom: 30px;
 }
 
+.slickSlider:hover .fotorama {
+    opacity: 1;
+}
+
+
+.qualification__certificate {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.qualification__certificate_descr {
+    text-align: left;
+    flex-basis: 20%;
+    box-sizing: border-box;
+}
+
+.qualification__certificate_items {
+    /* margin-left: 22vw; */
+    width: 74%;
+    position: relative;
+}
+
+.qualification__certificate_items img {
+    max-width: 100%;
+}
+
+.qualification__certificate_link {
+    display: inline-block;
+    margin-top: 1.302vw;
+}
+
+.qualification__certificate_link a {
+    font-size: 11px;
+}
+
+.qualification__certificate_wraper {
+    position: relative;
+}
+
+.qualification__certificate_img {
+    position: absolute;
+    z-index: 2;
+    left: -8vw;
+    bottom: -1vw;
+    width: 20.292vw;
+}
+
+
+.fotorama {
+    /* transition-duration: .3s;
+    transition-property: transform,opacity,background-color; */
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 80px;
+    z-index: 900;
+    cursor: pointer;
+}
+
+
+.fotorama__arr_prev {
+    composes: fotorama;
+    left: 0;
+}
+
+.fotorama__arr_next {
+    composes: fotorama;
+    right: 0;
+}
+
+.fotorama__arr {
+    transform: translate3d(-50%, -50%, 0);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    height: 80px;
+    width: 80px;
+    background-image: url(../../../assets/pics/gallery.png);
+    background-repeat: no-repeat;
+}
+
+.fotorama__arr__prev {
+    composes: fotorama__arr;
+    background-position: -80px -80px;
+}
+
+.fotorama__arr__next {
+    composes: fotorama__arr;
+    background-position: -160px -80px;
+}
 
 @media (max-width: 768px) {
-.carouselBlock{
-    padding-left: 15px;
-    padding-right: 15px;
-}
+
+    .qualification__certificate_descr {
+        display: none;
+    }
+
+    .qualification__certificate_items {
+        width: 100%;
+    }
+
+    .carouselBlock {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }

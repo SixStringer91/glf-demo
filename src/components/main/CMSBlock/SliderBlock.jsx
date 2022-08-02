@@ -8,6 +8,7 @@ import redspeed from '../../../assets/pics/home-flash-220708-cobra-radspeed.webp
 import cleveland from '../../../assets/pics/home-flash-220322-cleveland-cbx2.jpg';
 import tmSim from '../../../assets/pics/home-flash-220713-tm-sim.webp';
 import classes from './cms-block.module.css';
+import { MAINLINK } from '../../../constants';
 
 const sliderData = [
     {
@@ -34,7 +35,28 @@ const sliderData = [
         img: tmSim,
         alt: "Shop TaylorMade SIM Max and SIM2 Woods Irons at GolfDiscount.com" 
     }
-]
+];
+
+
+
+const PrevArrow = ({onClick}) => (
+    <div  onClick={onClick} className={classes.fotorama__arr_prev}
+        tabIndex="0"
+        role="button"
+        aria-label="Previous"
+        data-gallery-role="arrow">
+        <div className={classes.fotorama__arr__prev}></div>
+    </div>);
+
+
+const NextArrow = ({onClick}) => (
+    <div onClick={onClick} className={classes.fotorama__arr_next}
+        tabIndex="0"
+        role="button"
+        aria-label="Next"
+        data-gallery-role="arrow">
+        <div className={classes.fotorama__arr__next}></div>
+    </div>);
 
 function SliderBlock() {
 
@@ -45,9 +67,9 @@ function SliderBlock() {
         dots: true,
         dotsClass: "my-dots",
         cssEase: 'linear',
-        arrows: false,
-        // prevArrow: false,
-        // nextArrow: false,
+        arrows: true,
+        prevArrow: <PrevArrow />,
+        nextArrow: <NextArrow />,
         autoplay: true,
         className: classes.slickSlider
     };
@@ -57,16 +79,16 @@ function SliderBlock() {
 
     return (
         <div className={classes.carouselBlock}>
-            <div className="qualification">
-                <div className="qualification__certificate">
-                    <div className="qualification__certificate-descr">
+            <div>
+                <div className={classes.qualification__certificate}>
+                    <div className={classes.qualification__certificate_descr}>
                         <div>
                             <div>
-                                <a href="https://www.golfdiscount.com/closeouts/apparel"
+                                <a href={`${MAINLINK}/closeouts/apparel`}
                                     title="Closeout Golf Apparel at Golf Discount">
                                     <img src={homeLeftClosetsApparel} alt={"closets-apparel"} />
                                 </a>
-                                <a href="https://www.golfdiscount.com/golf-clubs/complete-sets"
+                                <a href={`${MAINLINK}/golf-clubs/complete-sets`}
                                     title="Package Sets at Golf Discount">
                                     <img src={homeLeftPackageSets} alt="package-set" />
                                 </a>
@@ -74,13 +96,15 @@ function SliderBlock() {
                         </div>
                     </div>
 
-                    <div class="qualification__certificate-items">
-                        <div class="qualification__certificate-wraper">
+                    <div className={classes.qualification__certificate_items}>
+                        <div className={classes.qualification__certificate_wraper}>
                             <Slider {...settings}>
-                                {sliderData.map(el => <div className="qualification__certificate-item">
+                                {sliderData.map(el => (
+                                <div key={el.alt} className={classes.qualification__certificate_item}>
                                          <img src={el.img}
                                              alt={el.alt} />
                                      </div>
+                                )
                             )}
                             </Slider>
                         </div>

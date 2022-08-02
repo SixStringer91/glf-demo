@@ -106,49 +106,7 @@ main {
     margin-bottom: 20px;
 }
 
-.qualification__certificate {
-    display: flex;
-    position: relative;
-    box-sizing: border-box;
-    justify-content: space-between;
-  }
-  
-  .qualification__certificate-descr {
-    text-align: left;
-    flex-basis: 20%;
-    box-sizing: border-box;
-  }
-  
-  .qualification__certificate-items {
-    /* margin-left: 22vw; */
-    width: 74%;
-    position: relative;
-  }
-  .qualification__certificate-items img {
-    max-width: 100%;
-  }
-  
-  .qualification__certificate-link {
-    display: inline-block;
-    margin-top: 1.302vw;
-  }
-  
-  .qualification__certificate-link a {
-    font-size: 11px;
-  }
-  
-  .qualification__certificate-wraper {
-    position: relative;
-  }
-  
-  .qualification__certificate-img {
-    position: absolute;
-    z-index: 2;
-    left: -8vw;
-    bottom: -1vw;
-    width: 20.292vw;
-  }
-  
+ 
   .arrowLeft {
     position: absolute;
     top: 50%;

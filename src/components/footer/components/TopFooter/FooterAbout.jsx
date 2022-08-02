@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from './footerTop.module.css';
 import img from '../../../../assets/pics/gd_logo.jpg';
+import { Link } from 'react-router-dom';
+import { MAINLINK } from '../../../../constants';
 
 
 const FooterAbout = () => {
@@ -13,7 +15,7 @@ const FooterAbout = () => {
             <p className={classes.aboutBottom}>
                 If you're looking for Golf Equipment online, compare us to other authorized online golf retailers. You'll find the absolute best prices, service and selection.
             </p>
-            <a className={classes.learnMore} href="https://www.golfdiscount.com/about_us/">Learn More</a>
+            <Link className={classes.learnMore} to={`${MAINLINK}/about_us/`}>Learn More</Link>
         </>
     )
 }
