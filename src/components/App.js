@@ -9,8 +9,6 @@ const [isOffset, toggleOffset] = useState(false);
 
 const className = isOffset? classes.appOffset : classes.app;
 
-
-
 const handleToggle = useCallback(() => toggleOffset((prev) => {
   if (!prev) {
       document.body.className = 'toggle';

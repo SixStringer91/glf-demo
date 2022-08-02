@@ -128,56 +128,6 @@ export const data = `
                 </div></form></div></div></div></script>
 
         <!-- MAIN CONTAINER START -->
-        <div class=carousel-block>
-        <div class="qualification">
-        <div class="qualification__certificate">
-          <div class="qualification__certificate-descr">
-          <div>
-          <div>
-              <a href="https://www.golfdiscount.com/closeouts/apparel"
-                  title="Closeout Golf Apparel at Golf Discount"><img
-                      src="${homeLeftClosetsApparel}"
-                  /></a>
-                  <a href="https://www.golfdiscount.com/golf-clubs/complete-sets"
-                      title="Package Sets at Golf Discount"><img
-                          src="${homeLeftPackageSets}"
-                  /></a>
-          </div>
-      </div>
-            </div>
-          <div class="qualification__certificate-items">
-            <div class="qualification__certificate-wraper">
-              <div class="qualification__certificate-slider">
-                <div class="qualification__certificate-item">
-                <img src="${callAwayMavrik}"
-                         alt="Shop Callaway Mavrik Woods and Irons at GolfDiscount.com" />
-                </div>
-                <div class="qualification__certificate-item">
-                <img src="${ping}"
-                    alt="Shop PING G410 Series at GolfDiscount.com" />
-                </div>
-                <div class="qualification__certificate-item">
-                <img src="${cobra}"
-                alt="Cobra MIM Wedges at GolfDiscount.com" />
-                </div>
-                <div class="qualification__certificate-item">
-                <img src="${redspeed}"
-                    alt="Price Too Low to Show on Cobra Radspeed at GolfDiscount.com" />
-                </div>
-                <div class="qualification__certificate-item">
-                <img src="${cleveland}"
-                alt="Cleveland CBX 2 Wedges at GolfDiscount.com" />
-                </div>
-                <div class="qualification__certificate-item">
-                <img src="${tmSim}"
-                    alt="Shop TaylorMade SIM Max and SIM2 Woods & Irons at GolfDiscount.com" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-        </div>
         <!-- OCYC -->
         <div class="nested-container">
             <div class="page-banners grid-container-spaced">

@@ -1,5 +1,5 @@
 import React from 'react';
-import CmsBlock from './CMSBlock/cms-block';
+import CmsBlock from './CMSBlock/CmsBlock';
 
 
 

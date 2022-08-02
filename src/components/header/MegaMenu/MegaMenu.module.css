@@ -32,7 +32,7 @@
     padding: 0 8px;
     display: block;
     background-color: #069;
-    color: #fff;
+    color: #f0f0f0;
     border-bottom: 5px solid #036;
     margin-bottom: 25px;
     position: relative;
@@ -190,9 +190,13 @@
     text-decoration: none;
 }
 
+.linksCont, .linksCont:visited {
+    color: #006bb4;
+}
+
 
 .headerLink>a>span {
-    color: #fff;
+    color: #f0f0f0;
 }
 
 .navigationMenu {
@@ -225,13 +229,15 @@
     composes: opener;
 }
 
-.megaMenuSubmenuActive {
-    composes: megaMenuSubmenu;
-}
-
-.secondLevelActive{
+.secondLevelActive {
     composes: secondLevel;
 }
+
+.TabsRoot {
+    display: none !important;
+}
+
+
 
 @media (max-width: 768px) {
     .contentLinksPanel {
@@ -242,6 +248,7 @@
         position: fixed;
         top: 0;
         width: calc(100% - 54px);
+        padding-top: 0;
     }
 
     .contentLinksPanelOffset {
@@ -268,7 +275,7 @@
     }
 
     .megaMenu {
-        background: #fff;
+        background: #f0f0f0;
         border-bottom: 1px solid #d1d1d1;
         ;
     }
@@ -283,7 +290,7 @@
 
     .headerLink {
         border-top: 1px solid #d1d1d1;
-
+        position: relative;
     }
 
 
@@ -296,22 +303,19 @@
         background: transparent;
     }
 
-    .headerLink {
-        position: relative;
-    }
-
     .menuNavTop {
         background: black;
-        color: #fff;
+        color: #f0f0f0;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .menuNavTop div:first-child{
+    .menuNavTop div:first-child {
         flex-grow: 1;
-        background-color: #000!important;
-        color: #fff!important;
+        background-color: #000 !important;
+        color: #f0f0f0;
+        ;
         text-align: center;
         display: block;
         font-size: 15px;
@@ -353,8 +357,32 @@
     }
 
     .megaMenuSubmenuActive {
-        display: block;
+        display: flex;
+        gap: 0;
         padding: 0;
+        flex-direction: column;
+    }
+
+    .linkToAll {
+        order: -1;
+        font-size: 15px;
+        padding-left: 15px;
+        font-size: 1.6rem;
+        color: #575757;
+        text-decoration: none;
+        font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        line-height: 1.42857143;
+        font-size: 1.4rem;
+        border-top: 1px solid #d1d1d1;
+        text-transform: none;
+        margin: 0;
+    }
+
+    .linkToAll span {
+        font-size: 15px;
+        color: #575757;
+
     }
 
     .navigationMenu li {
@@ -379,18 +407,13 @@
         font-weight: 400;
         line-height: 1.42857143;
         font-size: 1.4rem;
-        border-top: 1px solid #d1d1d1
     }
 
-    .firstLevelBlock a{
+    .firstLevelBlock a {
         line-height: 49px;
     }
 
     .megaMenuSubmenu {
-        padding-right: 0;
-    }
-
-    .headerLink {
         padding-right: 0;
     }
 
@@ -403,8 +426,9 @@
         display: block;
     }
 
-    .headerLink a {
+    .headerLink>a {
         padding-left: 15px;
+        line-height: 52px;
     }
 
     .firstLevelBlock a {
@@ -412,7 +436,7 @@
     }
 
     .firstLevelBlock span {
-        font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+        font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif;
         font-weight: 600;
         font-size: 15px;
     }
@@ -425,11 +449,72 @@
     }
 
     .lastFloor span {
-        font-size: 1.6rem;
+        font-size: 15px;
         color: #575757;
+        text-decoration: none;
+        font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.42857143;
     }
 
-    .contentLinks a{
-        color: transparent;
+    .contentLinksDisabled {
+        display: none;
     }
+
+    .menuWrapperDisabled {
+        display: none;
+    }
+
+    .roleAfterMenu::after {
+        display: none;
+    }
+
+    .TabsRoot {
+        display: flex;
+        padding-bottom: 20px;
+        background: #f0f0f0;
+    }
+
+    .Tab {
+        flex-basis: 50%;
+        text-align: center;
+        padding: 24px 0;
+        background: #e3e3e3;
+        border: solid #d7d7d7;
+        border-width: 0 0 1px 1px;
+    }
+
+    .TabSelected {
+        border-width: 0 0 0 1px;
+        background: 0 0;
+    }
+
+    .TabsLabel {
+        color: #006bb4;
+    }
+
+    .contentLinks{
+        justify-content: start;
+        flex-direction: column;
+        border-bottom: 1px solid #d1d1d1;
+    }
+
+    .contentLinks li{
+        padding: 0.8rem 15px;
+        border-top: 1px solid #d1d1d1;
+        margin-bottom: 0;
+    }
+
+    .contentLinks a,
+    .contentLinks a:visited {
+        color: #575757;
+        text-decoration: none;
+        display: block;
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    
 }

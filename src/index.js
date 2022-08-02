@@ -12,21 +12,6 @@ root.render(
   </React.StrictMode>
 );
 
-function delayGallery() {
-  window.$('.qualification__certificate-slider').slick({
-    infinite: true,
-    speed: 500,
-    fade: true,
-    dots: true,
-    dotsClass: "my-dots",
-    cssEase: 'linear',
-    prevArrow: false,
-    nextArrow: false,
-    autoplay: true
-  });
-}
-setTimeout(delayGallery)
-
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA

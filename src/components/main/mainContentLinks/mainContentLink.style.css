@@ -9,7 +9,7 @@
 
 
 .mainLinkLi{
-   background: url(https://www.golfdiscount.com/media/images/bullet.png)  0 no-repeat !important;
+   background: url(../../../assets/pics/bullet.png)  0 no-repeat !important;
    padding-left: 22px !important;
    list-style: none;
 }

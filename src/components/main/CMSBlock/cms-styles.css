@@ -103,6 +103,7 @@ main {
 
 .carousel-block{
     max-width: 1280px;
+    margin-bottom: 20px;
 }
 
 .qualification__certificate {
@@ -233,7 +234,7 @@ main {
 
 .list ul li:before {
     content: "";
-    background: url(https://www.golfdiscount.com/media/images/bullet.png) 3px 6px no-repeat;
+    background: url(../../../assets/pics/bullet.png) 3px 6px no-repeat;
     position: absolute;
     left: -16px;
     height: 18px;
