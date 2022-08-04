@@ -66,14 +66,12 @@ ul .trackOrder{
     max-width: 790px;
     width: 100%;
     justify-self: flex-end;
-    grid-area: SearchBar;
     align-self: flex-end;
-}
- .searchBar{
-    float: right;
+    grid-area: SearchBar;
     padding-left: 15px;
     position: relative;
- }
+}
+ 
 .searchContent{
     padding: 0px;
     overflow: unset;
@@ -245,6 +243,144 @@ form{
     margin-top: 0;
 }
 
+
+.controlSearch:focus + .inputBlock {
+    display: flex;
+}
+
+.inputBlock{
+    /* display: none; */
+    display: flex;
+    position: absolute;
+    width: 100%;
+    border: 1px solid #bbb;
+    border-top: 3px solid #8eb4d0;
+    border-radius: 1px;
+    background: #fff;
+    top: 100%;
+    z-index: 9999;
+    right: 30px;
+}
+
+.matchesItem{
+    display: flex;
+}
+
+.leftBlock{
+    padding: 20px 10px 70px;
+    flex-basis: 30%;
+}
+.rightBlock {
+    border-left: solid 1px #eee;
+    flex-basis: 70%;
+
+}
+
+.itemGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.matchesItem em{
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    text-align: left;
+    font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+    line-height: 1.42857143;
+    font-size: 1.4rem;
+}
+
+
+.matchesItem a, .matchesItem a:hover, .matchesItem a:visited {
+    color: #006bb4;
+    text-decoration: none;
+}
+
+
+.matchItem{
+    display: flex;
+    gap: 2%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.matchItem:hover{
+    background-color: #f4f4f4;
+}
+
+.imageBlock {
+    flex-basis: 20%;
+}
+
+.imageBlock img {
+    display: block;
+    background: url(../../../assets/pics/loader-1.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+.infoBlock{
+    flex-basis: 80%;
+}
+
+
+.loader img{
+    margin: 0 auto;
+    display: block;
+}
+
+.allProductsBlock{
+    padding: 12px;
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857143;
+    font-size: 1.4rem;
+}
+
+.allProductsBlock a,
+.allProductsBlock a:visited,
+.allProductsBlock a:hover {
+    color: #006bb4;
+    text-decoration: none;
+}
+
+
+.title{
+    color: #000;
+}
+
+.description {
+    color: #929292;
+    font-size: 11px;
+}
+
+.noProd {
+    padding: 1em 0;
+    text-align: center;
+    width: 100%;
+    color: #d3d3d3;
+    font-size: large;
+}
+
+.price{
+    color: #006bb4;
+    font-size: 16px;
+}
+
+.infoBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.stars {
+    flex-grow: 1;
+}
 
 @media (max-width: 1280px) {
     .topContent{
