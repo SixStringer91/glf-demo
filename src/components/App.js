@@ -3,7 +3,7 @@ import Header from './header';
 import Footer from './footer';
 import Main from './main';
 import { useCallback, useState } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
   const [isOffset, toggleOffset] = useState(false);

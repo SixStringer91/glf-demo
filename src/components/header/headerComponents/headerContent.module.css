@@ -23,7 +23,6 @@
 }
 .logo img{
     display: block;
-    /* max-width: 100%; */
     height: auto;
     border: 0;
     width: 170px;
@@ -70,6 +69,10 @@ ul .trackOrder{
     grid-area: SearchBar;
     padding-left: 15px;
     position: relative;
+}
+
+.searchBarActive {
+    composes: searchBar;
 }
  
 .searchContent{
@@ -249,8 +252,8 @@ form{
 }
 
 .inputBlock{
-    /* display: none; */
-    display: flex;
+    display: none;
+    /* display: flex; */
     position: absolute;
     width: 100%;
     border: 1px solid #bbb;
@@ -382,6 +385,22 @@ form{
     flex-grow: 1;
 }
 
+.searchAdaptiveToggle,
+.searchAdaptiveToggle:hover,
+.searchAdaptiveToggle:focus,
+.searchAdaptiveToggle:active{
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.searchAdaptiveToggle img{
+    display: block;
+}
+
+
+
 @media (max-width: 1280px) {
     .topContent{
         display: grid;
@@ -395,19 +414,76 @@ form{
     .searchBar {
         justify-self: flex-end;
     }
+
+    .searchBarActive {
+        composes: searchBar
+    }
 }
 
 @media (max-width: 768px) {
+
+    .itemGrid{
+        grid-template-columns: 1fr;
+    }
+
+    .controlSearch:focus + .inputBlock {
+        display: block;
+    }
+    
+
+    .inputBlock{
+        top: 135%;
+        right: 0;
+        left: 0;
+        padding: 10px;
+    }
+
+    .leftBlock {
+        display: none;
+    }
+
+    .rightBlock {
+        margin: 0 auto;
+        border-left: none;
+    }
+
+    .searchBar{
+        display: none;
+    }
+
+    .matchItem {
+        flex-direction: column;
+    }
+
+    div.searchBarActive {
+        display: block;
+        padding-left: 0;
+        padding-bottom: 20px;
+    }
+
     .topContent {
         grid-template-columns: 0.5fr 1.5fr 0.5fr;
         grid-template-rows: 1fr;
         grid-template-areas: 
         'NavToggle GolfImage TrackOrder'
+        'SearchBar SearchBar SearchBar';
     }
 
-    .logo {
-        justify-self: center;
+    .searchAdaptiveToggle,
+    .searchAdaptiveToggle:focus,
+    .searchAdaptiveToggle:hover,
+    .searchAdaptiveToggle:active{
+        display: block;
     }
+
+    .searchAdaptiveToggle img {
+        min-width: 24px;
+        min-height: 24px;
+    }
+
+    .searchBtn {
+        display: none;
+    };
 
     .contentOrder {
         align-self: center;
@@ -455,12 +531,19 @@ form{
         padding-right: 15px;
     }
 
+    
     .logo {
+        justify-self: center;
         align-self: center;
     }
 
     .logo img {
         max-width: 170px;
         width: 100%;
+    }
+
+    .contentOrder {
+        justify-self: center;
+        align-self: center;
     }
 }
