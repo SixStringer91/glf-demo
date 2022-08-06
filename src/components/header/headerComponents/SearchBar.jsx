@@ -2,10 +2,9 @@ import { useMemo } from "react";
 import { useHeaderContent } from './hooks/useHeaderContent';
 import magnifier from '../../../assets/pics/magnifier.svg';
 import loader from '../../../assets/pics/loader-1.gif';
-import { limitString } from '../../../libs';
-import err from '../../../assets/pics/err.png';
 import classes from './headerContent.module.css';
 import { Link } from 'react-router-dom';
+import Item from "./Item";
 
 
 function SearchBar({searchToggle}) {
@@ -29,21 +28,7 @@ function SearchBar({searchToggle}) {
 
 
     const itemsUi = useMemo(() => items?.results?.filter((_, i) => i < 8)
-        .map((el, i) => (
-            <div className={classes.matchItem} key={i}>
-                <div className={classes.imageBlock}>
-                    <img onError={(e) => {
-                            e.target.src = err
-                            e.target.style.background = 'none'
-                        }} src={el.imageUrl} alt={el.name} />
-                </div>
-                <div className={classes.infoBlock}>
-                    <div className={classes.title}>{limitString(String(el.name), 40)}</div>
-                    <div className={classes.description}>{limitString(String(el.description), 40)}</div>
-                    <div className={classes.stars} />
-                    <div className={classes.price}>${el.price}</div>
-                </div>
-            </div>)), [items])
+        .map((el, i) => <Item {...el} key={i} />), [items])
 
 
     const searchResult = useMemo(() => !loading && matchesUi, [loading, matchesUi]);

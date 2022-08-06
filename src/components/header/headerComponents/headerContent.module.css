@@ -1,3 +1,26 @@
+:global(.yotpo-icon-star:before) {
+    content: "\e60e";
+  }
+
+
+  :global(.yotpo-icon-half-star:before) {
+    content: "\e61a";
+  }
+  
+  :global(.yotpo-icon:before) {
+    font-family: Verdana !important;
+  }
+  
+  :global(.yotpo-icon-star),
+  :global(.yotpo-icon-half-star) {
+    color: #ffd200;
+  }
+
+  :global(.sr-only) {
+    display: none;
+  }
+
+
 .contentHeaderStyle{
     box-sizing: border-box;
     margin-left: auto;

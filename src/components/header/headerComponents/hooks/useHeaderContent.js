@@ -2,11 +2,11 @@ import { useDebounce } from "../../../../libs/hooks";
 import useObjectState from "../../../../libs/hooks/useObjectState";
 
 
-const API_LINK = 'https://ecz4i9.a.searchspring.io/api';
+const API_LINK = 'https://ecz4i9.a.searchspring.io';
 
-const matchesTag = (value) => `${API_LINK}/suggest/query?query=${value}&resultsFormat=native&siteId=ecz4i9`;
+const matchesTag = (value) => `${API_LINK}/api/suggest/query?query=${value}&resultsFormat=native&siteId=ecz4i9`;
 
-const matchedItemsTag = (value) => `${API_LINK}/search/autocomplete.json?q=${value}&resultsFormat=native&productCount=8&siteId=ecz4i9&domain=https://www.golfdiscount.com/`;
+const matchedItemsTag = (value) => `${API_LINK}/api/search/autocomplete.json?q=${value}&resultsFormat=native&productCount=8&siteId=ecz4i9&domain=https://www.golfdiscount.com/`;
 
 const initial = { isBlockVisible: false, matches: null, loading: false, items: null };
 

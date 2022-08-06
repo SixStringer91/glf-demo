@@ -47,6 +47,7 @@ a, a:visited, a:hover, a:active {
   color: transparent;
   text-decoration:inherit;
 }
+
 @media (max-width: 768px) {
   body.toggle{
     overflow: hidden;
