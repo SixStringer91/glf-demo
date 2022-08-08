@@ -2,21 +2,26 @@ import React, { useMemo } from 'react';
 import CmsBlock from './CMSBlock/CmsBlock';
 import {
     Routes,
-    Route,
-    BrowserRouter
+    Route
 } from "react-router-dom";
 import { ResolveURL } from './resolve-url';
 import classes from './main.module.css';
+import { ALL, MAIN, PRODUCT } from './routes';
+import { Product } from './product';
 
 const Main = () => {
 
     const routes = useMemo(() => [
         {
-            path: '/',
+            path: MAIN,
             component: <CmsBlock />
         },
         {
-            path: '/*',
+            path: PRODUCT,
+            component: <Product />
+        },
+        {
+            path: ALL,
             component: <ResolveURL />
         }
     ], []);

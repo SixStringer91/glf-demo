@@ -54,8 +54,8 @@ function SearchBar({searchToggle}) {
         return inner;
     }, [loading, items, itemsUi, matches]);
 
-    const searchClass = searchToggle ? classes.searchBarActive : classes.searchBar
-
+    const searchClass = searchToggle ? classes.searchBarActive : classes.searchBar;
+    
     return (
         <div className={searchClass}>
             <div className={classes.searchContent}>

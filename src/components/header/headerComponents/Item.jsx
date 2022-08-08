@@ -3,16 +3,15 @@ import classes from './headerContent.module.css';
 import err from '../../../assets/pics/err.png';
 import { limitString } from "../../../libs";
 import { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-const reviewsTag = (value) => `${
-    YOTPA_LINK
-}/batch/app_key/Lp89nKaP5duNVx4PltsI527ipHewSrVsSi0SZJ9o/domain_key/${value}/widget/bottomline`
+const reviewsTag = (value) => `${YOTPA_LINK
+    }/batch/app_key/Lp89nKaP5duNVx4PltsI527ipHewSrVsSi0SZJ9o/domain_key/${value}/widget/bottomline`
 
 function Item({ name, description, imageUrl, price, sku, url_key, entity_id }) {
     const [rating, setRating] = useState(null);
 
     const fetchRating = useCallback(() => {
-
         const data = new FormData();
 
         const body = {
@@ -40,20 +39,22 @@ function Item({ name, description, imageUrl, price, sku, url_key, entity_id }) {
 
     useEffect(fetchRating, [fetchRating]);
 
-    return <div className={classes.matchItem}>
-        <div className={classes.imageBlock}>
-            <img onError={(e) => {
-                e.target.src = err
-                e.target.style.background = 'none'
-            }} src={imageUrl} alt={name} />
-        </div>
-        <div className={classes.infoBlock}>
-            <div className={classes.title}>{limitString(String(name), 40)}</div>
-            <div className={classes.description}>{limitString(String(description), 40)}</div>
-            <div className={classes.stars} dangerouslySetInnerHTML={{ __html: rating?.result }} />
-            <div className={classes.price}>${price}</div>
-        </div>
-    </div>
+    return (
+        <Link to={`/product/${sku}`} className={classes.matchItem}>
+            <div className={classes.imageBlock}>
+                <img onError={(e) => {
+                    e.target.src = err;
+                    e.target.style.background = 'none';
+                }} src={imageUrl} alt={name} />
+            </div>
+            <div className={classes.infoBlock}>
+                <div className={classes.title}>{limitString(String(name), 40)}</div>
+                <div className={classes.description}>{limitString(String(description), 40)}</div>
+                <div className={classes.stars} dangerouslySetInnerHTML={{ __html: rating?.result }} />
+                <div className={classes.price}>${price}</div>
+            </div>
+        </Link>
+    )
 }
 
 export default Item;
