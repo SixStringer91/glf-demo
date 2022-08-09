@@ -6,8 +6,9 @@ import {
 } from "react-router-dom";
 import { ResolveURL } from './resolve-url';
 import classes from './main.module.css';
-import { ALL, MAIN, PRODUCT } from './routes';
+import { ALL, MAIN, PRODUCT, SEARCH } from './routes';
 import { Product } from './product';
+import { SearchResult } from './search-result';
 
 const Main = () => {
 
@@ -23,6 +24,10 @@ const Main = () => {
         {
             path: ALL,
             component: <ResolveURL />
+        },
+        {
+            path: SEARCH,
+            component: <SearchResult />
         }
     ], []);
 

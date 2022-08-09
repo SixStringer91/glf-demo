@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classes from './headerContent.module.css';
 import MegaMenu from '../MegaMenu';
-import img from '../../../assets/pics/gd_logo.jpg';
+import img from '../../../assets/pics/gd_logo_4.webp';
 import { MAINLINK } from '../../../constants';
 import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';

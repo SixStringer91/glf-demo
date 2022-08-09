@@ -41,7 +41,7 @@
 }
 
 .logo{
-    max-width: 70%;
+    /* max-width: 70%; */
     grid-area: GolfImage;
 }
 .logo img{
@@ -62,7 +62,7 @@ ul .trackOrder{
     display: flex;
     padding-left: 15px;
     justify-self: flex-end;
-    align-self: flex-end;
+    align-self: center;
 }
 
 .trackOrder a:visited,
@@ -88,7 +88,7 @@ ul .trackOrder{
     max-width: 790px;
     width: 100%;
     justify-self: flex-end;
-    align-self: flex-end;
+    align-self: center;
     grid-area: SearchBar;
     padding-left: 15px;
     position: relative;

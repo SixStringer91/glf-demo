@@ -18,7 +18,7 @@ function SearchBar({searchToggle}) {
                 <span>
                     <em>
                         {matches.query}
-                    </em> in <Link to={`/catalogsearch/result?q=${el.text}`}>
+                    </em> in <Link to={`/search/${el.text}`}>
                         {el.text}
                     </Link>
                 </span>
