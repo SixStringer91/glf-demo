@@ -1,15 +1,19 @@
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 import { useHeaderContent } from './hooks/useHeaderContent';
 import magnifier from '../../../assets/pics/magnifier.svg';
 import loader from '../../../assets/pics/loader-1.gif';
 import classes from './headerContent.module.css';
-import { Link } from 'react-router-dom';
-import Item from "./Item";
+import { Link, useNavigate } from 'react-router-dom';
+import ProductItem from "../../../ui-kit/product-item/ProductItem";
+import { SEARCH } from "../../main/routes";
 
 
 function SearchBar({searchToggle}) {
     const { loading, matches, items, isBlockVisible, fetchData } = useHeaderContent();
 
+    const navigate = useNavigate();
+
+    const inputRef = useRef(null);
 
     const matchesUi = useMemo(() => matches && matches.alternatives
         .map((el, i) => (
@@ -18,7 +22,7 @@ function SearchBar({searchToggle}) {
                 <span>
                     <em>
                         {matches.query}
-                    </em> in <Link to={`/search/${el.text}`}>
+                    </em> in <Link to={`search?q=${el.text.replace(' ', '+')}`}>
                         {el.text}
                     </Link>
                 </span>
@@ -28,7 +32,7 @@ function SearchBar({searchToggle}) {
 
 
     const itemsUi = useMemo(() => items?.results?.filter((_, i) => i < 8)
-        .map((el, i) => <Item {...el} key={i} />), [items])
+        .map((el, i) => <ProductItem {...el} key={i} />), [items])
 
 
     const searchResult = useMemo(() => !loading && matchesUi, [loading, matchesUi]);
@@ -42,7 +46,9 @@ function SearchBar({searchToggle}) {
                     {
                         items?.results?.length
                             ? itemsUi
-                            : <span className={classes.noProd}>No products for query {matches?.query}</span>
+                            : <span className={classes.noProd}>
+                                No products for query {matches?.query}
+                            </span>
                     }
                 </div>
                 <div className={classes.allProductsBlock}>
@@ -54,14 +60,20 @@ function SearchBar({searchToggle}) {
         return inner;
     }, [loading, items, itemsUi, matches]);
 
+    const onSubmit = (e) => {
+        e.preventDefault();
+        if(inputRef.current) navigate(`${SEARCH}?q=${inputRef.current.value}`);
+    }
+
     const searchClass = searchToggle ? classes.searchBarActive : classes.searchBar;
     
     return (
         <div className={searchClass}>
             <div className={classes.searchContent}>
-                <form>
+                <form onSubmit={onSubmit}>
                     <div className={classes.fieldSearch}>
                         <input
+                            ref={inputRef}
                             autoComplete={'off'}
                             id='search'
                             onChange={fetchData}

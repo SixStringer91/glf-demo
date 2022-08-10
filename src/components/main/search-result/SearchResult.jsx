@@ -1,33 +1,54 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Recommendations } from "../../../ui-kit";
-import Item from "../../header/headerComponents/Item";
+import { useLocation, useNavigate } from "react-router-dom";
+import { API_LINK } from "../../../constants";
+import { ProductItem, Recommendations } from "../../../ui-kit";
+import FilterForm from "./FilterForm";
 import classes from './searchResult.module.css';
 
-const LINK = 'https://ecz4i9.a.searchspring.io/api/search/search.json?q=123&resultsPerPage=12&resultsFormat=native&siteId=ecz4i9'
+
+const fetchSearch = (query) => `${
+    API_LINK
+}/api/search/search.json${query}&resultsFormat=native&siteId=ecz4i9`;
 
 function SearchResult() {
     const [data, setData] = useState(null);
+    const { search } = useLocation();
+    const navigate = useNavigate();
+
+
 
     const getSearchData = useCallback(async () => {
-        const resp = await fetch(LINK);
+        const resp = await fetch(fetchSearch(search));
         const result = await resp.json();
         setData(result);
-    }, []);
+    }, [search]);
 
     useEffect(() => { getSearchData() }, [getSearchData])
 
     const searchItems = useMemo(() => {
         if (!data) return data;
         return data.results.map((el) => <div key={`search-item-${el.entity_id}`}>
-            <Item {...el} />
+            <ProductItem classNames={{ root: classes.itemRoot }} {...el} />
         </div>)
-    }, [data])
+    }, [data]);
+
+    const form = useMemo(
+        () => data &&
+            <FilterForm
+                navigate={navigate}
+                query={search}
+                facets={data.facets} 
+            />, [data, navigate, search]
+    );
 
     return (
-        <div className={classes.searchResult}>
+        <div>
             <h1>Search results</h1>
-            <div className={classes.foundItems}>
-                {searchItems}
+            <div className={classes.searchResult}>
+                {form}
+                <div className={classes.foundItems}>
+                    {searchItems}
+                </div>
             </div>
             <Recommendations />
         </div>

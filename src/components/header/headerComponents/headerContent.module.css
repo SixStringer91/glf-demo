@@ -310,55 +310,6 @@ form{
     grid-template-rows: auto;
 }
 
-.matchesItem em{
-    font-weight: 700;
-    font-style: normal;
-    color: #000;
-    text-align: left;
-    font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
-    line-height: 1.42857143;
-    font-size: 1.4rem;
-}
-
-
-.matchesItem a, .matchesItem a:hover, .matchesItem a:visited {
-    color: #006bb4;
-    text-decoration: none;
-}
-
-
-.matchItem{
-    display: flex;
-    gap: 2%;
-    padding: 10px;
-    cursor: pointer;
-}
-
-a.matchItem:hover {
-    text-decoration: none;
-}
-
-.matchItem:hover{
-    background-color: #f4f4f4;
-}
-
-.imageBlock {
-    flex-basis: 20%;
-}
-
-.imageBlock img {
-    display: block;
-    background: url(../../../assets/pics/loader-1.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-indent: -9999px;
-}
-
-.infoBlock{
-    flex-basis: 80%;
-}
-
-
 .loader img{
     margin: 0 auto;
     display: block;
@@ -478,10 +429,6 @@ a.matchItem:hover {
 
     .searchBar{
         display: none;
-    }
-
-    .matchItem {
-        flex-direction: column;
     }
 
     div.searchBarActive {
