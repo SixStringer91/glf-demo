@@ -1,4 +1,3 @@
-
 .searchResult {
     display: flex;
     gap: 15px;
@@ -10,7 +9,7 @@
 }
 
 .header {
-    padding: 7px; 
+    padding: 7px;
 }
 
 .header {
@@ -26,8 +25,8 @@
     height: 32px;
 }
 
-.checkboxes{
-    list-style: none; 
+.checkboxes {
+    list-style: none;
     margin-top: 10px;
     margin-bottom: 0;
 }
@@ -40,24 +39,67 @@
     flex-basis: 30%;
 }
 
-.foundItems{
-    flex-basis: 70%;
-}
 
 .foundItems {
+    flex-basis: 70%;
     flex-grow: 1;
+    height: max-content;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.foundItemGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 30px;
-    height: max-content;
+    flex-grow: 1;
+    padding: 30px 0;
 }
 
-.itemRoot{
+.itemRoot {
     display: flex;
     flex-direction: column;
     text-align: center;
     height: 100%;
+}
+
+.searchSpring {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: start;
+    padding: 6px 10px;
+    color: #aaa;
+    text-align: center;
+    background: #f4f4f4;
+    font-size: 12px;
+    clear: both;
+    line-height: 32px;
+}
+
+.pullRight {
+    display: flex;
+    align-items: center;
+}
+
+.pullLeft {
+    font-weight: 700;
+}
+
+.pullRightSelect select {
+    background: #fff url(../../../assets/pics/select-bg.svg) no-repeat 100% 45%;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 32px;
+    line-height: 1.42857143;
+    padding: 4px 25px 5px 10px;
+    vertical-align: baseline;
+    width: 100%;
 }
 
 a.itemRoot:hover {
@@ -65,5 +107,25 @@ a.itemRoot:hover {
 }
 
 .itemRoot :global(.pull-left) {
-    float: none ;
+    float: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginationItem,
+.paginationItem:hover,
+.paginationItem:visited  {
+    padding: 1rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.paginationItemSelected {
+    composes: paginationItem;
+    cursor: unset;
+    font-weight: 700;
 }
