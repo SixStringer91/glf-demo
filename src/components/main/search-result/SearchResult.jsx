@@ -32,11 +32,30 @@ function SearchResult() {
         </div>)
     }, [data]);
 
-    const searchItemsLength = useMemo(() => data && (
+    const searchItemsLength = useMemo(() => data && (<div>
+        <span>{data.pagination.currentPage} of {data.pagination.totalPages}</span>
+        {' '}
         <strong className={classes.pullLeft}>
-            {data.results.length} result found
+            {data.pagination.totalResults} results found
         </strong>
+        </div>
     ), [data]);
+
+
+    const handleSelectChange = (e) => {
+        try {
+            const [key, value] = e.target.value.split('=');
+            const url = new URLSearchParams(search);
+            const paramsArr = search.split('&');
+            const elem = paramsArr.find((el) => el.includes('sort.'));
+            if (elem) url.delete(elem.split('=')[0]);
+            url.set(`sort.${key}`, value);
+            navigate(`/search?${url.toString()}`);
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
     const searchOptions = useMemo(() => data && (
         <div className={classes.pullRight}>
@@ -44,9 +63,9 @@ function SearchResult() {
                 SORT BY &nbsp;
             </span>
             <div className={classes.pullRightSelect}>
-                <select>
+                <select onChange={handleSelectChange}>
                     {data.sorting.options.map((el, i) => (
-                        <option key={`option-${el.field}-${i}`}>
+                        <option value={`${el.field}=${el.direction}`} key={`option-${el.field}-${i}`}>
                             {el.label}
                         </option>
                     ))}
@@ -68,7 +87,7 @@ function SearchResult() {
 
     return (
         <div>
-            <h1>Search results</h1>
+            <h1 className={classes.pageTitle}><span>Search results</span></h1>
             <div className={classes.searchResult}>
                 {form}
                 <div className={classes.foundItems}>

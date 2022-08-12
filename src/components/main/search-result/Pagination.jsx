@@ -16,9 +16,10 @@ function Pagination({
 }) {
 
     const numbers = [...new Array(totalPages)]
-        .map((_, i) => {
+        .map((_, i) => i+1)
+        // .filter( el => el >= Math.abs(currentPage - 3) && el <= currentPage +3)
+        .map((num) => {
             const url = new URLSearchParams(query);
-            const num = i + 1;
             url.set('page', num);
             const currentClass = num === currentPage
                 ? classes.paginationItemSelected
