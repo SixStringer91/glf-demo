@@ -15,9 +15,32 @@ function Pagination({
     totalResults
 }) {
 
-    const numbers = [...new Array(totalPages)]
-        .map((_, i) => i+1)
-        // .filter( el => el >= Math.abs(currentPage - 3) && el <= currentPage +3)
+    const numbers = useMemo(() => {
+        let startPoint, endPoint;
+        const numArr = [...new Array(totalPages)].map((_, i) => i+1);
+        const minorZero = currentPage - 5 <= 0;
+        const majorTotal = currentPage + 5 >= totalPages;
+        const minPage = currentPage - 3;
+        const maxPage = currentPage + 2;
+    
+        switch (true) {
+            case minorZero && majorTotal:
+            default:
+                startPoint = Math.sign(minPage) ? 0 : minPage;
+                endPoint = maxPage > totalPages ? totalPages : maxPage;
+                break;
+            case minorZero:
+                startPoint = 0;
+                endPoint = startPoint + 5;
+                break;
+            case majorTotal:
+                endPoint = totalPages;
+                startPoint = endPoint - 5;
+                break;
+        }
+
+        return numArr
+        .slice(startPoint, endPoint)
         .map((num) => {
             const url = new URLSearchParams(query);
             url.set('page', num);
@@ -29,12 +52,13 @@ function Pagination({
                 <Link
                     key={linkUrl}
                     className={currentClass}
-                    to={linkUrl}>
+                    to={linkUrl}
+                >
                     {num}
                 </Link>
             )
-        }
-        );
+        })
+    }, [currentPage, query, totalPages]);
 
     const prevPageComponent = useMemo(() => {
         if (!previousPage) return null;

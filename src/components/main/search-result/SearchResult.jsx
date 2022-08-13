@@ -65,7 +65,10 @@ function SearchResult() {
             <div className={classes.pullRightSelect}>
                 <select onChange={handleSelectChange}>
                     {data.sorting.options.map((el, i) => (
-                        <option value={`${el.field}=${el.direction}`} key={`option-${el.field}-${i}`}>
+                        <option 
+                            value={`${el.field}=${el.direction}`} 
+                            key={`option-${el.field}-${i}`}
+                        >
                             {el.label}
                         </option>
                     ))}
@@ -77,6 +80,7 @@ function SearchResult() {
     const form = useMemo(
         () => data &&
             <FilterForm
+                filterSummary={data.filterSummary}
                 navigate={navigate}
                 query={search}
                 facets={data.facets}
@@ -84,6 +88,9 @@ function SearchResult() {
     );
 
     const pagination = data && <Pagination query={search} {...data.pagination} />
+
+
+    console.log("DATA", data);
 
     return (
         <div>

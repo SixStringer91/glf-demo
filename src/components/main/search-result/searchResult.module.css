@@ -70,6 +70,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-self: start;
     padding: 6px 10px;
     color: #aaa;
@@ -154,4 +155,71 @@ a.clearAll:active {
     margin-bottom: 15px;
     text-align: center;
     text-decoration: none;
+}
+
+.filterDeleteList{
+    margin: 0;
+    padding: 0;
+}
+
+.filterDelete{
+    list-style-type: none;
+    color: #636363;
+    border-radius: 2px;
+    border: solid 1px #ddd;
+    background-color: #f4f4f4;
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    padding: 0.2em 0.5em;
+    overflow: hidden;
+    margin-right: 0.4em;
+    margin-bottom: 0;
+}
+
+.filterDelete button,
+.filterDelete button:hover{
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.4rem;
+    vertical-align: middle;
+    background: transparent;
+    border: none;
+}
+
+.filterDelete span:first-child {
+    color: #636363;
+    font-weight: 700;
+}
+
+.filterDelete span:last-of-type{
+    margin: 0 0.5em;
+    color: #636363;
+    white-space: nowrap;
+}
+
+
+@media (max-width:768px) {
+    .filterBlock {
+        display: none;
+    }
+
+    .foundItemGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pageTitle span{
+        font-size: 2.6rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width:480px) {
+    .foundItemGrid {
+        grid-template-columns: 1fr;
+    }
 }

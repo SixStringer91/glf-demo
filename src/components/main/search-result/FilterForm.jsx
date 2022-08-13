@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import FormItem from './FormItem';
 import classes from './searchResult.module.css';
 
-function FilterForm({ query, facets, navigate }) {
+function FilterForm({ query, facets, navigate, filterSummary }) {
 
     const goTo = useCallback((label, item) => {
         const key = `filter.${label.field}`;
@@ -20,7 +20,7 @@ function FilterForm({ query, facets, navigate }) {
         } else activeParams.push(item.value);
 
         activeParams.forEach(el => url.append(key, el));
-        navigate(`/search?${url.toString()}`)
+        navigate(`/search?${url.toString()}`);
 
     }, [navigate, query]);
 
@@ -49,8 +49,31 @@ function FilterForm({ query, facets, navigate }) {
         )
     }, [query]);
 
+
+    const filterParams = useMemo(() => {
+        return filterSummary.map((el) => {
+            const onChangeHandle = () => {
+                const url = query
+                .replace(`&filter.${el.field}=${el.value.replace(' ', '+')}`, '');
+                navigate(`/search${url}`);
+            }
+
+            return <li key={`delete-${el.label}`} className={classes.filterDelete}>
+                <span>{el.filterLabel}</span> 
+                <span>{el.value}</span>
+                <button onClick={onChangeHandle} type='button'>
+                    X
+                </button>
+            </li>
+
+    });
+    }, [filterSummary, navigate, query]);
+
     return <div className={classes.filterBlock}>
         {clearAllLink}
+        <ul className={classes.filterDeleteList}>
+            {filterParams}
+        </ul>
         <div>
             {formElements}
         </div>
