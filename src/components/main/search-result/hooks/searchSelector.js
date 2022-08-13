@@ -1,6 +1,4 @@
-export const equalKeyIndex = (key, inputText) => key
-  .toLowerCase()
-  .search(inputText.toLowerCase());
+import { equalKeyIndex } from "../../../../libs";
 
 export function searchFilter(
   searchInputTxt,

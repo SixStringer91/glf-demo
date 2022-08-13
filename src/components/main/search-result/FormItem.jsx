@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Excretion } from '../../../ui-kit/excretion';
 import useSearch from './hooks/useSearch';
 import classes from './searchResult.module.css';
 
@@ -40,7 +41,7 @@ function FormItem({ data, goTo }) {
                                     type="checkbox"
                                     value={checkbox.value}
                                 />
-                                {checkbox.value}{`(${checkbox.count})`}
+                                <Excretion name={checkbox.value} inputText={searchText} />{`(${checkbox.count})`}
                             </label>
                         </li>
                     )

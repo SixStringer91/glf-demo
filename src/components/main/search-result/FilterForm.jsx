@@ -53,8 +53,8 @@ function FilterForm({ query, facets, navigate, filterSummary }) {
     const filterParams = useMemo(() => {
         return filterSummary.map((el) => {
             const onChangeHandle = () => {
-                const url = query
-                .replace(`&filter.${el.field}=${el.value.replace(' ', '+')}`, '');
+                const url = decodeURI(query)
+                .replace(`&filter.${el.field}=${el.value.replace(' ', '+').toString()}`, '');
                 navigate(`/search${url}`);
             }
 

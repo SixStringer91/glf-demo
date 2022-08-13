@@ -15,3 +15,8 @@ export const limitString = (text, limit) => {
     else
         return text;
 };
+
+
+export const equalKeyIndex = (key, inputText) => key
+  .toLowerCase()
+  .search(inputText.toLowerCase());
